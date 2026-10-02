@@ -3,6 +3,8 @@ export interface Project {
   tagline: string
   description: string
   status: string
+  /** Public repo whose stars are shown on the card */
+  repo: string
   meta: string[]
   features: { title: string, description: string, icon: string }[]
   links: { label: string, to: string, icon?: string }[]
@@ -53,6 +55,7 @@ export const projects: Project[] = [
     description:
       'IndexOne records your calls, transcribes them and writes a structured note you own as plain Markdown, all on your Mac. Recordings, transcripts and notes stay 100% on your device: no account and no cloud processing. Your library sits in an encrypted database, and nothing is sent anywhere unless you explicitly choose to.',
     status: 'Free in early access',
+    repo: 'index-one-landing-page',
     meta: ['macOS 13.4+', 'Apple Silicon & Intel', 'No account needed'],
     features: [
       {

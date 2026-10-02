@@ -12,6 +12,11 @@ export default defineNuxtConfig({
 
   css: ['~/assets/css/main.css', '~/assets/scss/main.scss'],
 
+  runtimeConfig: {
+    githubOrg: 'monoone-dev',
+    githubToken: ''
+  },
+
   colorMode: {
     preference: 'system',
     fallback: 'light'

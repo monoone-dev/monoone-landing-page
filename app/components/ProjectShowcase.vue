@@ -1,7 +1,12 @@
 <script setup lang="ts">
 import type { Project } from '~/data/site'
 
-defineProps<{ project: Project }>()
+import { site } from '~/data/site'
+
+const props = defineProps<{ project: Project }>()
+
+const { data: stats } = useGithubStats()
+const stars = computed(() => stats.value?.repos[props.project.repo])
 </script>
 
 <template>
@@ -38,6 +43,16 @@ defineProps<{ project: Project }>()
             :trailing-icon="i === 0 ? undefined : link.icon"
             :variant="i === 0 ? 'solid' : 'outline'"
             target="_blank"
+            size="lg"
+          />
+          <UButton
+            v-if="stars !== undefined"
+            :to="`${site.github}/${project.repo}`"
+            target="_blank"
+            icon="i-lucide-star"
+            :label="`Star · ${stars}`"
+            color="neutral"
+            variant="ghost"
             size="lg"
           />
         </div>

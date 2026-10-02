@@ -206,3 +206,12 @@ $ease-out: cubic-bezier(0.22, 1, 0.36, 1);
   background: var(--ui-primary);
   color: var(--ui-bg);
 }
+
+// GitHub stats load after the page; fade them in instead of popping
+.fade-enter-active {
+  transition: opacity 0.6s $ease-out;
+}
+
+.fade-enter-from {
+  opacity: 0;
+}

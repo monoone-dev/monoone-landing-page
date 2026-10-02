@@ -42,26 +42,29 @@ import { principles, projects, site } from '~/data/site'
       </template>
 
       <template #links>
-        <div
-          class="enter flex flex-wrap justify-center gap-3"
-          style="--enter-delay: 540ms"
-        >
-          <UButton
-            label="Meet IndexOne"
-            to="#projects"
-            trailing-icon="i-lucide-arrow-down"
-            size="xl"
-            class="nudge"
-          />
-          <UButton
-            label="GitHub"
-            :to="site.github"
-            target="_blank"
-            icon="i-simple-icons-github"
-            size="xl"
-            color="neutral"
-            variant="outline"
-          />
+        <div class="flex w-full flex-col items-center gap-6">
+          <div
+            class="enter flex flex-wrap justify-center gap-3"
+            style="--enter-delay: 540ms"
+          >
+            <UButton
+              label="Meet Projects"
+              to="#projects"
+              trailing-icon="i-lucide-arrow-down"
+              size="xl"
+              class="nudge"
+            />
+            <UButton
+              label="GitHub"
+              :to="site.github"
+              target="_blank"
+              icon="i-simple-icons-github"
+              size="xl"
+              color="neutral"
+              variant="outline"
+            />
+          </div>
+          <GithubStats />
         </div>
       </template>
     </UPageHero>
