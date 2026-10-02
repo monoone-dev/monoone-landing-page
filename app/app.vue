@@ -3,13 +3,21 @@ import * as uiLocales from '@nuxt/ui/locale'
 import { site } from '~/data/site'
 
 const { t, locale } = useI18n()
+const { app, public: { i18n } } = useRuntimeConfig()
+
+// Works under a sub-path too (GitHub Pages serves the site from /<repo>/)
+const asset = (file: string) => `${app.baseURL}${file}`
+const absolute = (file: string) => `${(i18n.baseUrl as string).replace(/\/$/, '')}${asset(file)}`
 
 // <html lang>, hreflang alternates and og:locale for every language
 const i18nHead = useLocaleHead()
 
 useHead(() => ({
   htmlAttrs: { lang: i18nHead.value.htmlAttrs.lang },
-  link: [...(i18nHead.value.link ?? [])],
+  link: [
+    { rel: 'icon', type: 'image/svg+xml', href: asset('favicon.svg') },
+    ...(i18nHead.value.link ?? [])
+  ],
   meta: [
     ...(i18nHead.value.meta ?? []),
     { name: 'theme-color', content: '#fafafa', media: '(prefers-color-scheme: light)' },
@@ -22,7 +30,7 @@ useSeoMeta({
   description: () => t('meta.description'),
   ogTitle: site.name,
   ogDescription: () => t('meta.title'),
-  ogImage: '/og-image.png',
+  ogImage: absolute('og-image.png'),
   twitterCard: 'summary_large_image'
 })
 

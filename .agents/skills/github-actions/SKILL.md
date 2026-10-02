@@ -5,8 +5,9 @@ description: Author and maintain GitHub Actions workflows for this repo (Nuxt 4 
 
 # /github-actions — workflow best practices for this repo
 
-Cloud CI is one file: `.github/workflows/ci.yml`. It runs the same commands a contributor runs
-locally — `pnpm install --frozen-lockfile`, `pnpm typecheck`, `pnpm build` — and nothing else.
+Two workflows: `.github/workflows/ci.yml` (PR gate) runs the same commands a contributor runs
+locally — `pnpm install --frozen-lockfile`, `pnpm typecheck`, `pnpm build`, plus the Pages-style
+`pnpm generate` — and `.github/workflows/pages.yml` deploys `main` to GitHub Pages.
 To change *what* is checked, see `/ci-maintenance`.
 
 ## Non-negotiables
@@ -47,8 +48,25 @@ command -v actionlint >/dev/null && actionlint || echo "(install actionlint to l
 gh workflow run CI && gh run watch      # after the branch is pushed
 ```
 
-## Deploy (not set up yet)
+## Deploy — GitHub Pages (`.github/workflows/pages.yml`)
 
-There is no deploy workflow. The site needs a server for the live GitHub counters
-(`server/api/github.get.ts`); `pnpm generate` would freeze them at build time. Agree the host with the
-user before writing one, and keep any token in a repository secret (`NUXT_GITHUB_TOKEN`).
+- Runs on every push to `main`, on demand, and daily at 05:17 UTC (refreshes the GitHub
+  stars/followers that are baked into the static pages).
+- `pnpm generate` with `NITRO_PRESET=github_pages` prerenders every language plus `/api/github`
+  into `.output/public` (with `.nojekyll` and `404.html`).
+- `actions/configure-pages` supplies the base path and origin: `/<repo>/` on `<org>.github.io`,
+  `/` once a custom domain is set — never hard-code them. They feed `NUXT_APP_BASE_URL` and
+  `NUXT_PUBLIC_I18N_BASE_URL` (origin only; the i18n module adds the base path itself).
+- Least privilege: the build job only reads; `pages: write` + `id-token: write` live on the
+  deploy job alone. `concurrency: pages` without cancel, so a deploy is never cut off.
+- Prerequisite (one-time, repo admin): Settings → Pages → Source: **GitHub Actions**. Without it
+  `configure-pages` fails with "Get Pages site failed".
+- Anything new that must work on Pages has to be static: no server routes at request time, and
+  every asset path must go through `app.baseURL` (see `asset()` in `app/app.vue`).
+
+Reproduce the deploy build locally:
+
+```bash
+NITRO_PRESET=github_pages NUXT_APP_BASE_URL=/monoone-landing-page/ \
+NUXT_PUBLIC_I18N_BASE_URL=https://monoone-dev.github.io pnpm generate
+```

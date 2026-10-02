@@ -3,12 +3,6 @@ export default defineNuxtConfig({
 
   devtools: { enabled: true },
 
-  app: {
-    head: {
-      link: [{ rel: 'icon', type: 'image/svg+xml', href: '/favicon.svg' }]
-    }
-  },
-
   css: ['~/assets/css/main.css', '~/assets/scss/main.scss'],
 
   runtimeConfig: {
@@ -24,6 +18,7 @@ export default defineNuxtConfig({
   // English is the default (no prefix); other languages live under /pl, /es, ...
   // First visit to / follows the browser language, then the choice is kept in a cookie.
   i18n: {
+    // Origin only (no path); the deploy sets NUXT_PUBLIC_I18N_BASE_URL to the Pages origin
     baseUrl: 'https://monoone.dev',
     defaultLocale: 'en',
     strategy: 'prefix_except_default',
@@ -42,6 +37,14 @@ export default defineNuxtConfig({
       cookieKey: 'i18n_locale',
       redirectOn: 'root',
       fallbackLocale: 'en'
+    }
+  },
+
+  // `pnpm generate` (GitHub Pages) prerenders every language and bakes the GitHub
+  // numbers into the pages; the deploy workflow reruns daily to refresh them.
+  nitro: {
+    prerender: {
+      routes: ['/', '/pl', '/es', '/it', '/fr', '/pt', '/de', '/api/github']
     }
   },
 

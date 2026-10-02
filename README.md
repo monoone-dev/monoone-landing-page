@@ -10,7 +10,7 @@ Stack: Nuxt 4 · Nuxt UI 4 · TypeScript · Vite · SCSS (Tailwind CSS 4 underne
 pnpm install
 pnpm dev          # http://localhost:3000
 pnpm typecheck
-pnpm generate     # static site in .output/public
+pnpm generate     # static site in .output/public (what GitHub Pages serves)
 ```
 
 ## Where things live
@@ -20,13 +20,18 @@ pnpm generate     # static site in .output/public
 - `app/assets/css/main.css` — the "Mono" skin: a grayscale palette with black/white primary that flips in dark mode.
 - `app/assets/scss/main.scss` — decorative styles (background grid, wordmark).
 - `app/app.config.ts` — Nuxt UI color and component overrides.
-- `server/api/github.get.ts` — GitHub stars and followers, cached for an hour.
+- `server/api/github.get.ts` — GitHub stars and followers; prerendered into the static build.
 
 ## Language and theme
 
 - The first visit to `/` follows the browser language (`Accept-Language`) and redirects to `/pl`, `/es`, …;
   unsupported languages get English. A choice made in the language picker is kept in the `i18n_locale` cookie.
 - Light/dark follows the system setting until the visitor picks one with the toggle.
+
+## Deploy
+
+`main` is deployed to GitHub Pages by `.github/workflows/pages.yml` (also daily, to refresh the
+GitHub numbers). One-time setup: Settings → Pages → Source: GitHub Actions.
 
 ## Environment
 
