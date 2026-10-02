@@ -34,7 +34,11 @@ useSeoMeta({
   twitterCard: 'summary_large_image'
 })
 
-const uiLocale = computed(() => uiLocales[locale.value as keyof typeof uiLocales] ?? uiLocales.en)
+// Nuxt UI's own strings (aria labels etc.); Chinese is Simplified
+const uiLocale = computed(() => {
+  const code = (locale.value === 'zh' ? 'zh_cn' : locale.value) as keyof typeof uiLocales
+  return uiLocales[code] ?? uiLocales.en
+})
 </script>
 
 <template>

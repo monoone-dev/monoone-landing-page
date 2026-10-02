@@ -20,6 +20,19 @@ export const site = {
   discussions: 'https://github.com/monoone-dev/index-one-landing-page/discussions'
 }
 
+// Flag shown in the language picker (circle-flags icons: SVG, so they look the same on every OS)
+export const flags: Record<string, string> = {
+  en: 'i-circle-flags-gb',
+  pl: 'i-circle-flags-pl',
+  es: 'i-circle-flags-es',
+  it: 'i-circle-flags-it',
+  fr: 'i-circle-flags-fr',
+  pt: 'i-circle-flags-br',
+  de: 'i-circle-flags-de',
+  zh: 'i-circle-flags-cn',
+  ja: 'i-circle-flags-jp'
+}
+
 export const principles = [
   { key: 'localFirst', icon: 'i-lucide-hard-drive' },
   { key: 'ownFiles', icon: 'i-lucide-file-text' },

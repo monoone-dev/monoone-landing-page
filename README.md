@@ -15,7 +15,7 @@ pnpm generate     # static site in .output/public (what GitHub Pages serves)
 
 ## Where things live
 
-- `i18n/locales/*.json` — all text in English (default), Polish, Spanish, Italian, French, Portuguese and German.
+- `i18n/locales/*.json` — all text in English (default and fallback), Polish, Spanish, Italian, French, Portuguese, German, Chinese (Simplified) and Japanese.
 - `app/data/site.ts` — page structure: links, icons and translation keys. Edit this to add a project.
 - `app/assets/css/main.css` — the "Mono" skin: a grayscale palette with black/white primary that flips in dark mode.
 - `app/assets/scss/main.scss` — decorative styles (background grid, wordmark).
@@ -24,7 +24,7 @@ pnpm generate     # static site in .output/public (what GitHub Pages serves)
 
 ## Language and theme
 
-- The first visit to `/` follows the browser language (`Accept-Language`) and redirects to `/pl`, `/es`, …;
+- The first visit to `/` follows the browser language (`Accept-Language`) and redirects to `/pl`, `/es`, `/zh`, …;
   unsupported languages get English. A choice made in the language picker is kept in the `i18n_locale` cookie.
 - Light/dark follows the system setting until the visitor picks one with the toggle.
 

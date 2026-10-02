@@ -1,0 +1,100 @@
+{
+  "meta": {
+    "title": "专为 Mac 打造的小巧软件，默认保护隐私",
+    "description": "我们打造的工具会把你的数据留在你的设备上，并让你拥有属于自己的文件。"
+  },
+  "nav": {
+    "principles": "理念",
+    "projects": "项目",
+    "contact": "联系",
+    "language": "语言",
+    "github": "GitHub 上的 MonoOne"
+  },
+  "hero": {
+    "badge": "独立软件 · macOS",
+    "title1": "小巧的软件。",
+    "title2": "默认私密。",
+    "description": "我们打造的工具会把你的数据留在你的设备上，并让你拥有属于自己的文件。",
+    "cta": "了解项目"
+  },
+  "stats": {
+    "stars": "{n} 个星标",
+    "followers": "{n} 位关注者"
+  },
+  "principles": {
+    "title": "我们的信念",
+    "description": "每款 MonoOne 产品都遵循的四条原则。没有例外，没有附加条款。",
+    "items": {
+      "localFirst": {
+        "title": "本地优先",
+        "description": "你的数据留在你的设备上。所有核心功能都可离线使用，无需账户。"
+      },
+      "ownFiles": {
+        "title": "文件归你所有",
+        "description": "磁盘上的纯 Markdown 文件。没有专有格式，没有锁定，也无需繁琐的导出。"
+      },
+      "private": {
+        "title": "默认私密",
+        "description": "云端功能需主动开启，发送前会移除敏感信息。共享采用端到端加密。"
+      },
+      "mac": {
+        "title": "为 Mac 而生",
+        "description": "原生应用，已签名并经过公证。支持 Apple Silicon 和 Intel，需要 macOS 13.4 或更高版本。"
+      }
+    }
+  },
+  "projects": {
+    "title": "项目",
+    "description": "一款专注的产品，用心打造。更多产品会在准备好后推出。",
+    "star": "星标 · {n}"
+  },
+  "indexOne": {
+    "status": "抢先体验期间免费",
+    "tagline": "安全、100% 本地的 macOS 会议笔记。",
+    "description": "IndexOne 会录制你的通话、进行转写，并生成一份归你所有的结构化纯 Markdown 笔记，一切都在你的 Mac 上完成。录音、转写稿和笔记 100% 保留在你的设备上：无需账户，也不在云端处理。你的资料库存放在加密数据库中，除非你明确选择，否则不会向任何地方发送任何内容。",
+    "meta": {
+      "macos": "macOS 13.4+",
+      "arch": "Apple Silicon 和 Intel",
+      "noAccount": "无需账户"
+    },
+    "links": {
+      "download": "下载 Mac 版",
+      "site": "index-one.io"
+    },
+    "features": {
+      "bothSides": {
+        "title": "通话双方",
+        "description": "你的麦克风和对方的声音，合并为一份清晰的转写稿。"
+      },
+      "whisper": {
+        "title": "设备端 Whisper",
+        "description": "转写借助 Metal 在本地运行，不使用云端转写。"
+      },
+      "notes": {
+        "title": "笔记归你所有",
+        "description": "摘要、决策和待办事项以 Markdown 格式保存在你的 Obsidian 库中。"
+      },
+      "answers": {
+        "title": "有出处的回答",
+        "description": "可在通话中或数月后提问，并查看每个回答来自哪些会议。"
+      },
+      "encrypted": {
+        "title": "加密且可锁定",
+        "description": "Mac 上的一个加密数据库，并支持按文件夹使用 Touch ID 锁定。"
+      },
+      "ai": {
+        "title": "你的 AI，你做主",
+        "description": "使用设备端模型，或主动选择云端模型。还有一个本地 MCP 服务器，供你自己的智能体使用。"
+      }
+    }
+  },
+  "contact": {
+    "title": "发现了 bug 或有想法？",
+    "description": "我们公开开发。问题和讨论都在 GitHub 上。",
+    "issue": "提交问题",
+    "discussions": "讨论"
+  },
+  "footer": {
+    "tagline": "macOS 优先 · 本地优先 · 纯 Markdown"
+  }
+}

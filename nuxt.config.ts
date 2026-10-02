@@ -23,15 +23,18 @@ export default defineNuxtConfig({
     defaultLocale: 'en',
     strategy: 'prefix_except_default',
     locales: [
-      { code: 'en', language: 'en-US', name: 'English', file: 'en.json' },
+      { code: 'en', language: 'en', name: 'English', file: 'en.json' },
       { code: 'pl', language: 'pl-PL', name: 'Polski', file: 'pl.json' },
       { code: 'es', language: 'es-ES', name: 'Español', file: 'es.json' },
       { code: 'it', language: 'it-IT', name: 'Italiano', file: 'it.json' },
       { code: 'fr', language: 'fr-FR', name: 'Français', file: 'fr.json' },
       { code: 'pt', language: 'pt-BR', name: 'Português', file: 'pt.json' },
-      { code: 'de', language: 'de-DE', name: 'Deutsch', file: 'de.json' }
+      { code: 'de', language: 'de-DE', name: 'Deutsch', file: 'de.json' },
+      { code: 'zh', language: 'zh-CN', name: '简体中文', file: 'zh.json' },
+      { code: 'ja', language: 'ja-JP', name: '日本語', file: 'ja.json' }
     ],
     vueI18n: './i18n.config.ts',
+    // Any browser language we don't support (and any missing key) falls back to English
     detectBrowserLanguage: {
       useCookie: true,
       cookieKey: 'i18n_locale',
@@ -44,7 +47,7 @@ export default defineNuxtConfig({
   // numbers into the pages; the deploy workflow reruns daily to refresh them.
   nitro: {
     prerender: {
-      routes: ['/', '/pl', '/es', '/it', '/fr', '/pt', '/de', '/api/github']
+      routes: ['/', '/pl', '/es', '/it', '/fr', '/pt', '/de', '/zh', '/ja', '/api/github']
     }
   },
 

@@ -9,8 +9,9 @@ description: Change what the MonoOne website says or shows — add or edit a pro
 
 | What | Where |
 | --- | --- |
-| All visible text, per language | `i18n/locales/{en,pl,es,it,fr,pt,de}.json` |
+| All visible text, per language | `i18n/locales/{en,pl,es,it,fr,pt,de,zh,ja}.json` |
 | Page structure: links, icons, translation keys | `app/data/site.ts` |
+| Language picker (flag button) | `app/components/LanguageSwitcher.vue`, flags in `app/data/site.ts` |
 | Languages, default, browser detection | `i18n` block in `nuxt.config.ts`, plural rules in `i18n/i18n.config.ts` |
 | Page layout (hero, principles, projects, contact) | `app/pages/index.vue` |
 | Project card | `app/components/ProjectShowcase.vue` |
@@ -32,14 +33,17 @@ description: Change what the MonoOne website says or shows — add or edit a pro
 
 ## Translations
 
-- English (`en.json`) is the source and the default; every key must exist in all seven files.
+- English (`en.json`) is the source, the default and the fallback; every key must exist in all nine files.
   A missing key silently falls back to English, so add new text to all of them in the same change.
 - Plurals use vue-i18n choices: `zero | one | other` (`"{n} stars | {n} star | {n} stars"`).
   Polish has four: `zero | one | few | many` (`"{n} gwiazdek | {n} gwiazdka | {n} gwiazdki | {n} gwiazdek"`).
+  Chinese and Japanese have no plural forms: one message (`"{n} 个星标"`, `"スター {n} 件"`).
+- Chinese is Simplified (`zh` → `zh-CN`); Traditional-Chinese browsers also land on it.
 - Use gender-neutral phrasing (Polish: avoid `-łeś/-łaś` forms).
 - Escape vue-i18n special characters (`@ { } | $`) as `{'@'}` if they ever appear in copy.
-- Adding a language: a JSON file, an entry in `i18n.locales` in `nuxt.config.ts`, and check that
-  `@nuxt/ui/locale` has it (the language picker uses it).
+- Adding a language: a JSON file, an entry in `i18n.locales` and in `nitro.prerender.routes` in
+  `nuxt.config.ts`, a flag in `flags` in `app/data/site.ts` (`i-circle-flags-<country>`), and check
+  that `@nuxt/ui/locale` has it (Nuxt UI's own labels; see `uiLocale` in `app/app.vue`).
 
 ## Add a project
 
