@@ -1,0 +1,100 @@
+{
+  "meta": {
+    "title": "Small, private-by-default software for the Mac",
+    "description": "We build tools that keep your data on your device and leave you with files you own."
+  },
+  "nav": {
+    "principles": "Principles",
+    "projects": "Projects",
+    "contact": "Contact",
+    "language": "Language",
+    "github": "MonoOne on GitHub"
+  },
+  "hero": {
+    "badge": "Independent software · macOS",
+    "title1": "Small software.",
+    "title2": "Private by default.",
+    "description": "We build tools that keep your data on your device and leave you with files you own.",
+    "cta": "Meet Projects"
+  },
+  "stats": {
+    "stars": "{n} stars | {n} star | {n} stars",
+    "followers": "{n} followers | {n} follower | {n} followers"
+  },
+  "principles": {
+    "title": "What we believe",
+    "description": "Four rules every MonoOne product follows. No exceptions, no fine print.",
+    "items": {
+      "localFirst": {
+        "title": "Local-first",
+        "description": "Your data stays on your device. Everything core works offline and without an account."
+      },
+      "ownFiles": {
+        "title": "Files you own",
+        "description": "Plain Markdown on disk. No proprietary formats, no lock-in, no export ritual."
+      },
+      "private": {
+        "title": "Private by default",
+        "description": "Cloud features are opt-in and redacted. Sharing is end-to-end encrypted."
+      },
+      "mac": {
+        "title": "Made for the Mac",
+        "description": "Native, signed and notarized. Apple Silicon and Intel, macOS 13.4 or later."
+      }
+    }
+  },
+  "projects": {
+    "title": "Projects",
+    "description": "One focused product, built carefully. More when it's ready.",
+    "star": "Star · {n}"
+  },
+  "indexOne": {
+    "status": "Free in early access",
+    "tagline": "Secure, 100% local meeting notes for macOS.",
+    "description": "IndexOne records your calls, transcribes them and writes a structured note you own as plain Markdown, all on your Mac. Recordings, transcripts and notes stay 100% on your device: no account and no cloud processing. Your library sits in an encrypted database, and nothing is sent anywhere unless you explicitly choose to.",
+    "meta": {
+      "macos": "macOS 13.4+",
+      "arch": "Apple Silicon & Intel",
+      "noAccount": "No account needed"
+    },
+    "links": {
+      "download": "Download for Mac",
+      "site": "index-one.io"
+    },
+    "features": {
+      "bothSides": {
+        "title": "Both sides of the call",
+        "description": "Your mic and the other side, merged into one clear transcript."
+      },
+      "whisper": {
+        "title": "On-device Whisper",
+        "description": "Transcription runs locally with Metal. No cloud transcription."
+      },
+      "notes": {
+        "title": "Notes you own",
+        "description": "Summary, decisions and action items as Markdown in your Obsidian vault."
+      },
+      "answers": {
+        "title": "Answers with sources",
+        "description": "Ask mid-call or months later and see which meetings each answer came from."
+      },
+      "encrypted": {
+        "title": "Encrypted and lockable",
+        "description": "One encrypted database on your Mac, plus per-folder Touch ID locks."
+      },
+      "ai": {
+        "title": "Your AI, your choice",
+        "description": "On-device model or opt-in cloud. A local MCP server for your own agents."
+      }
+    }
+  },
+  "contact": {
+    "title": "Found a bug or have an idea?",
+    "description": "We build in the open. Issues and discussions live on GitHub.",
+    "issue": "Open an issue",
+    "discussions": "Discussions"
+  },
+  "footer": {
+    "tagline": "macOS-first · local-first · plain Markdown"
+  }
+}

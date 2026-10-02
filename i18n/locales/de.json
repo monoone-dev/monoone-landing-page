@@ -1,0 +1,100 @@
+{
+  "meta": {
+    "title": "Kleine Software für den Mac, standardmäßig privat",
+    "description": "Wir entwickeln Werkzeuge, die deine Daten auf deinem Gerät lassen und dir Dateien geben, die dir gehören."
+  },
+  "nav": {
+    "principles": "Prinzipien",
+    "projects": "Projekte",
+    "contact": "Kontakt",
+    "language": "Sprache",
+    "github": "MonoOne auf GitHub"
+  },
+  "hero": {
+    "badge": "Unabhängige Software · macOS",
+    "title1": "Kleine Software.",
+    "title2": "Standardmäßig privat.",
+    "description": "Wir entwickeln Werkzeuge, die deine Daten auf deinem Gerät lassen und dir Dateien geben, die dir gehören.",
+    "cta": "Projekte entdecken"
+  },
+  "stats": {
+    "stars": "{n} Sterne | {n} Stern | {n} Sterne",
+    "followers": "{n} Follower | {n} Follower | {n} Follower"
+  },
+  "principles": {
+    "title": "Woran wir glauben",
+    "description": "Vier Regeln, an die sich jedes MonoOne-Produkt hält. Ohne Ausnahmen, ohne Kleingedrucktes.",
+    "items": {
+      "localFirst": {
+        "title": "Lokal zuerst",
+        "description": "Deine Daten bleiben auf deinem Gerät. Alles Wesentliche funktioniert offline und ohne Konto."
+      },
+      "ownFiles": {
+        "title": "Dateien, die dir gehören",
+        "description": "Reines Markdown auf der Festplatte. Keine proprietären Formate, kein Lock-in, kein mühsamer Export."
+      },
+      "private": {
+        "title": "Standardmäßig privat",
+        "description": "Cloud-Funktionen sind optional, sensible Daten werden vor dem Senden entfernt. Teilen ist Ende-zu-Ende-verschlüsselt."
+      },
+      "mac": {
+        "title": "Für den Mac gemacht",
+        "description": "Nativ, signiert und notarisiert. Apple Silicon und Intel, macOS 13.4 oder neuer."
+      }
+    }
+  },
+  "projects": {
+    "title": "Projekte",
+    "description": "Ein fokussiertes Produkt, mit Sorgfalt gebaut. Mehr, wenn es so weit ist.",
+    "star": "Stern · {n}"
+  },
+  "indexOne": {
+    "status": "Kostenlos im Early Access",
+    "tagline": "Sichere, 100 % lokale Meeting-Notizen für macOS.",
+    "description": "IndexOne nimmt deine Calls auf, transkribiert sie und schreibt eine strukturierte Notiz in reinem Markdown, die dir gehört – alles auf deinem Mac. Aufnahmen, Transkripte und Notizen bleiben zu 100 % auf deinem Gerät: kein Konto und keine Verarbeitung in der Cloud. Deine Bibliothek liegt in einer verschlüsselten Datenbank, und nichts wird irgendwohin gesendet, außer du entscheidest dich ausdrücklich dafür.",
+    "meta": {
+      "macos": "macOS 13.4+",
+      "arch": "Apple Silicon und Intel",
+      "noAccount": "Kein Konto nötig"
+    },
+    "links": {
+      "download": "Für Mac laden",
+      "site": "index-one.io"
+    },
+    "features": {
+      "bothSides": {
+        "title": "Beide Seiten des Calls",
+        "description": "Dein Mikrofon und die Gegenseite, zusammengeführt in einem klaren Transkript."
+      },
+      "whisper": {
+        "title": "Whisper auf dem Gerät",
+        "description": "Die Transkription läuft lokal mit Metal. Keine Transkription in der Cloud."
+      },
+      "notes": {
+        "title": "Notizen, die dir gehören",
+        "description": "Zusammenfassung, Entscheidungen und Aufgaben als Markdown in deinem Obsidian-Vault."
+      },
+      "answers": {
+        "title": "Antworten mit Quellen",
+        "description": "Frag während des Calls oder Monate später und sieh, aus welchen Meetings jede Antwort stammt."
+      },
+      "encrypted": {
+        "title": "Verschlüsselt und sperrbar",
+        "description": "Eine verschlüsselte Datenbank auf deinem Mac, dazu Ordnersperren per Touch ID."
+      },
+      "ai": {
+        "title": "Deine KI, deine Wahl",
+        "description": "Modell auf dem Gerät oder optionale Cloud. Ein lokaler MCP-Server für deine eigenen Agenten."
+      }
+    }
+  },
+  "contact": {
+    "title": "Einen Fehler gefunden oder eine Idee?",
+    "description": "Wir arbeiten offen. Issues und Diskussionen findest du auf GitHub.",
+    "issue": "Issue eröffnen",
+    "discussions": "Diskussionen"
+  },
+  "footer": {
+    "tagline": "macOS zuerst · lokal zuerst · reines Markdown"
+  }
+}

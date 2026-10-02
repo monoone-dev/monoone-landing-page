@@ -1,0 +1,100 @@
+{
+  "meta": {
+    "title": "Małe oprogramowanie na Maca, prywatne z założenia",
+    "description": "Tworzymy narzędzia, które trzymają Twoje dane na Twoim urządzeniu i zostawiają Ci pliki, które należą do Ciebie."
+  },
+  "nav": {
+    "principles": "Zasady",
+    "projects": "Projekty",
+    "contact": "Kontakt",
+    "language": "Język",
+    "github": "MonoOne na GitHubie"
+  },
+  "hero": {
+    "badge": "Niezależne oprogramowanie · macOS",
+    "title1": "Małe oprogramowanie.",
+    "title2": "Prywatne z założenia.",
+    "description": "Tworzymy narzędzia, które trzymają Twoje dane na Twoim urządzeniu i zostawiają Ci pliki, które należą do Ciebie.",
+    "cta": "Poznaj projekty"
+  },
+  "stats": {
+    "stars": "{n} gwiazdek | {n} gwiazdka | {n} gwiazdki | {n} gwiazdek",
+    "followers": "{n} obserwujących | {n} obserwujący | {n} obserwujących | {n} obserwujących"
+  },
+  "principles": {
+    "title": "W co wierzymy",
+    "description": "Cztery zasady, których przestrzega każdy produkt MonoOne. Bez wyjątków i bez drobnego druku.",
+    "items": {
+      "localFirst": {
+        "title": "Najpierw lokalnie",
+        "description": "Twoje dane zostają na Twoim urządzeniu. Wszystko, co najważniejsze, działa offline i bez konta."
+      },
+      "ownFiles": {
+        "title": "Pliki należą do Ciebie",
+        "description": "Zwykły Markdown na dysku. Bez zamkniętych formatów, bez uzależnienia od dostawcy, bez kłopotliwego eksportu."
+      },
+      "private": {
+        "title": "Prywatne z założenia",
+        "description": "Funkcje w chmurze są opcjonalne, a dane wrażliwe są usuwane przed wysłaniem. Udostępnianie jest szyfrowane end-to-end."
+      },
+      "mac": {
+        "title": "Stworzone dla Maca",
+        "description": "Natywne, podpisane i notaryzowane. Apple Silicon i Intel, macOS 13.4 lub nowszy."
+      }
+    }
+  },
+  "projects": {
+    "title": "Projekty",
+    "description": "Jeden dopracowany produkt. Kolejne, gdy będą gotowe.",
+    "star": "Gwiazdka · {n}"
+  },
+  "indexOne": {
+    "status": "Za darmo we wczesnym dostępie",
+    "tagline": "Bezpieczne, w 100% lokalne notatki ze spotkań na macOS.",
+    "description": "IndexOne nagrywa Twoje rozmowy, transkrybuje je i tworzy uporządkowaną notatkę w zwykłym Markdownie, która należy do Ciebie, a wszystko to na Twoim Macu. Nagrania, transkrypcje i notatki zostają w 100% na Twoim urządzeniu: bez konta i bez przetwarzania w chmurze. Twoja biblioteka jest przechowywana w zaszyfrowanej bazie danych i nic nie jest nigdzie wysyłane, chyba że wyraźnie na to pozwolisz.",
+    "meta": {
+      "macos": "macOS 13.4+",
+      "arch": "Apple Silicon i Intel",
+      "noAccount": "Bez konta"
+    },
+    "links": {
+      "download": "Pobierz na Maca",
+      "site": "index-one.io"
+    },
+    "features": {
+      "bothSides": {
+        "title": "Obie strony rozmowy",
+        "description": "Twój mikrofon i druga strona, połączone w jedną czytelną transkrypcję."
+      },
+      "whisper": {
+        "title": "Whisper na urządzeniu",
+        "description": "Transkrypcja działa lokalnie dzięki Metal. Bez transkrypcji w chmurze."
+      },
+      "notes": {
+        "title": "Notatki należą do Ciebie",
+        "description": "Podsumowanie, decyzje i zadania jako Markdown w Twoim sejfie Obsidiana."
+      },
+      "answers": {
+        "title": "Odpowiedzi ze źródłami",
+        "description": "Pytaj w trakcie rozmowy lub miesiące później i sprawdzaj, z których spotkań pochodzi każda odpowiedź."
+      },
+      "encrypted": {
+        "title": "Szyfrowane i blokowane",
+        "description": "Jedna zaszyfrowana baza danych na Twoim Macu oraz blokady folderów przez Touch ID."
+      },
+      "ai": {
+        "title": "Twoje AI, Twój wybór",
+        "description": "Model na urządzeniu lub opcjonalnie chmura. Lokalny serwer MCP dla Twoich własnych agentów."
+      }
+    }
+  },
+  "contact": {
+    "title": "Masz pomysł lub zgłoszenie błędu?",
+    "description": "Działamy otwarcie. Zgłoszenia i dyskusje prowadzimy na GitHubie.",
+    "issue": "Zgłoś problem",
+    "discussions": "Dyskusje"
+  },
+  "footer": {
+    "tagline": "najpierw macOS · najpierw lokalnie · zwykły Markdown"
+  }
+}

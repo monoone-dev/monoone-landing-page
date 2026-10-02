@@ -1,0 +1,16 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="-2 -2 104 104">
+  <style>
+    .ink{fill:#0a0a0a}.mid{fill:#5c5c5c}.soft{fill:#bdbdbd}.light{fill:#e5e5e5}
+    @media (prefers-color-scheme:dark){.ink{fill:#fafafa}.mid{fill:#a3a3a3}.soft{fill:#5c5c5c}.light{fill:#333}}
+  </style>
+  <clipPath id="l"><rect x="-2" y="-2" width="52" height="104"/></clipPath>
+  <clipPath id="r"><rect x="50" y="-2" width="52" height="104"/></clipPath>
+  <g clip-path="url(#l)">
+    <path class="ink" d="M0 11 Q0 0 9.76 5.07 L100 52 L100 89 Q100 100 90.24 94.93 L0 48 Z"/>
+    <path class="mid" d="M0 48 L90.08 4.76 Q100 0 100 11 L100 52 L9.92 95.24 Q0 100 0 89 Z"/>
+  </g>
+  <g clip-path="url(#r)">
+    <path class="light" d="M0 48 L90.08 4.76 Q100 0 100 11 L100 52 L9.92 95.24 Q0 100 0 89 Z"/>
+    <path class="soft" d="M0 11 Q0 0 9.76 5.07 L100 52 L100 89 Q100 100 90.24 94.93 L0 48 Z"/>
+  </g>
+</svg>

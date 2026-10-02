@@ -1,0 +1,100 @@
+{
+  "meta": {
+    "title": "Mac のための小さなソフトウェア。最初からプライバシー重視",
+    "description": "データをあなたのデバイスに留め、あなたが所有するファイルを残すツールをつくっています。"
+  },
+  "nav": {
+    "principles": "理念",
+    "projects": "プロジェクト",
+    "contact": "お問い合わせ",
+    "language": "言語",
+    "github": "GitHub の MonoOne"
+  },
+  "hero": {
+    "badge": "インディペンデントソフトウェア · macOS",
+    "title1": "小さなソフトウェア。",
+    "title2": "最初からプライベート。",
+    "description": "データをあなたのデバイスに留め、あなたが所有するファイルを残すツールをつくっています。",
+    "cta": "プロジェクトを見る"
+  },
+  "stats": {
+    "stars": "スター {n} 件",
+    "followers": "フォロワー {n} 人"
+  },
+  "principles": {
+    "title": "私たちの信条",
+    "description": "MonoOne のすべての製品が守る 4 つのルール。例外も、細かい但し書きもありません。",
+    "items": {
+      "localFirst": {
+        "title": "ローカルファースト",
+        "description": "データはあなたのデバイスに留まります。主要な機能はすべてオフラインで、アカウントなしで使えます。"
+      },
+      "ownFiles": {
+        "title": "ファイルはあなたのもの",
+        "description": "ディスク上のプレーンな Markdown。独自形式も、ロックインも、面倒なエクスポートもありません。"
+      },
+      "private": {
+        "title": "最初からプライベート",
+        "description": "クラウド機能はオプトイン方式で、送信前に機密情報が取り除かれます。共有はエンドツーエンドで暗号化されます。"
+      },
+      "mac": {
+        "title": "Mac のために",
+        "description": "ネイティブで、署名と公証済み。Apple Silicon と Intel に対応、macOS 13.4 以降。"
+      }
+    }
+  },
+  "projects": {
+    "title": "プロジェクト",
+    "description": "丁寧につくった、ひとつの製品に集中しています。次の製品は準備ができてから。",
+    "star": "スター · {n}"
+  },
+  "indexOne": {
+    "status": "アーリーアクセス期間中は無料",
+    "tagline": "安全で 100% ローカルな macOS 用会議ノート。",
+    "description": "IndexOne は通話を録音して文字起こしし、あなたが所有するプレーンな Markdown の構造化ノートを作成します。すべてあなたの Mac 上で行われます。録音、文字起こし、ノートは 100% あなたのデバイスに留まります。アカウントは不要で、クラウドでの処理もありません。ライブラリは暗号化されたデータベースに保存され、あなたが明示的に選ばない限り、どこにも送信されません。",
+    "meta": {
+      "macos": "macOS 13.4+",
+      "arch": "Apple Silicon と Intel",
+      "noAccount": "アカウント不要"
+    },
+    "links": {
+      "download": "Mac 版をダウンロード",
+      "site": "index-one.io"
+    },
+    "features": {
+      "bothSides": {
+        "title": "通話の両側",
+        "description": "あなたのマイクと相手側の音声を、ひとつの読みやすい文字起こしにまとめます。"
+      },
+      "whisper": {
+        "title": "オンデバイスの Whisper",
+        "description": "文字起こしは Metal を使ってローカルで実行されます。クラウドでの文字起こしはありません。"
+      },
+      "notes": {
+        "title": "ノートはあなたのもの",
+        "description": "要約、決定事項、アクションアイテムを Markdown で Obsidian の保管庫に保存します。"
+      },
+      "answers": {
+        "title": "出典つきの回答",
+        "description": "通話中でも数か月後でも質問でき、各回答がどの会議に基づくかを確認できます。"
+      },
+      "encrypted": {
+        "title": "暗号化とロック",
+        "description": "Mac 上のひとつの暗号化データベースに加え、フォルダごとに Touch ID でロックできます。"
+      },
+      "ai": {
+        "title": "AI は自由に選択",
+        "description": "オンデバイスのモデルか、オプトインのクラウドを選べます。自分のエージェント向けのローカル MCP サーバーも用意しています。"
+      }
+    }
+  },
+  "contact": {
+    "title": "バグを見つけた、またはアイデアがありますか？",
+    "description": "私たちはオープンに開発しています。Issue とディスカッションは GitHub にあります。",
+    "issue": "Issue を作成",
+    "discussions": "ディスカッション"
+  },
+  "footer": {
+    "tagline": "macOS ファースト · ローカルファースト · プレーンな Markdown"
+  }
+}

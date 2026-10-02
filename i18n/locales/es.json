@@ -1,0 +1,100 @@
+{
+  "meta": {
+    "title": "Software pequeño para Mac, privado por defecto",
+    "description": "Creamos herramientas que mantienen tus datos en tu dispositivo y te dejan archivos que son tuyos."
+  },
+  "nav": {
+    "principles": "Principios",
+    "projects": "Proyectos",
+    "contact": "Contacto",
+    "language": "Idioma",
+    "github": "MonoOne en GitHub"
+  },
+  "hero": {
+    "badge": "Software independiente · macOS",
+    "title1": "Software pequeño.",
+    "title2": "Privado por defecto.",
+    "description": "Creamos herramientas que mantienen tus datos en tu dispositivo y te dejan archivos que son tuyos.",
+    "cta": "Conoce los proyectos"
+  },
+  "stats": {
+    "stars": "{n} estrellas | {n} estrella | {n} estrellas",
+    "followers": "{n} seguidores | {n} seguidor | {n} seguidores"
+  },
+  "principles": {
+    "title": "En qué creemos",
+    "description": "Cuatro reglas que sigue cada producto de MonoOne. Sin excepciones ni letra pequeña.",
+    "items": {
+      "localFirst": {
+        "title": "Primero local",
+        "description": "Tus datos se quedan en tu dispositivo. Todo lo esencial funciona sin conexión y sin cuenta."
+      },
+      "ownFiles": {
+        "title": "Archivos que son tuyos",
+        "description": "Markdown plano en el disco. Sin formatos propietarios, sin dependencias y sin exportaciones engorrosas."
+      },
+      "private": {
+        "title": "Privado por defecto",
+        "description": "Las funciones en la nube son opcionales y los datos sensibles se eliminan antes de enviarse. Compartir está cifrado de extremo a extremo."
+      },
+      "mac": {
+        "title": "Hecho para Mac",
+        "description": "Nativo, firmado y notarizado. Apple Silicon e Intel, macOS 13.4 o posterior."
+      }
+    }
+  },
+  "projects": {
+    "title": "Proyectos",
+    "description": "Un producto bien enfocado y hecho con cuidado. Habrá más cuando estén listos.",
+    "star": "Estrella · {n}"
+  },
+  "indexOne": {
+    "status": "Gratis en acceso anticipado",
+    "tagline": "Notas de reuniones seguras y 100 % locales para macOS.",
+    "description": "IndexOne graba tus llamadas, las transcribe y redacta una nota estructurada en Markdown plano que es tuya, todo en tu Mac. Las grabaciones, transcripciones y notas se quedan al 100 % en tu dispositivo: sin cuenta y sin procesamiento en la nube. Tu biblioteca se guarda en una base de datos cifrada y no se envía nada a ningún sitio salvo que tú lo decidas expresamente.",
+    "meta": {
+      "macos": "macOS 13.4+",
+      "arch": "Apple Silicon e Intel",
+      "noAccount": "Sin cuenta"
+    },
+    "links": {
+      "download": "Descargar para Mac",
+      "site": "index-one.io"
+    },
+    "features": {
+      "bothSides": {
+        "title": "Ambos lados de la llamada",
+        "description": "Tu micrófono y el otro lado, unidos en una transcripción clara."
+      },
+      "whisper": {
+        "title": "Whisper en el dispositivo",
+        "description": "La transcripción se ejecuta localmente con Metal. Sin transcripción en la nube."
+      },
+      "notes": {
+        "title": "Notas que son tuyas",
+        "description": "Resumen, decisiones y tareas en Markdown dentro de tu bóveda de Obsidian."
+      },
+      "answers": {
+        "title": "Respuestas con fuentes",
+        "description": "Pregunta durante la llamada o meses después y ve de qué reuniones sale cada respuesta."
+      },
+      "encrypted": {
+        "title": "Cifrado y bloqueable",
+        "description": "Una base de datos cifrada en tu Mac y bloqueo por carpeta con Touch ID."
+      },
+      "ai": {
+        "title": "Tu IA, tu elección",
+        "description": "Modelo en el dispositivo o nube opcional. Un servidor MCP local para tus propios agentes."
+      }
+    }
+  },
+  "contact": {
+    "title": "¿Has encontrado un error o tienes una idea?",
+    "description": "Trabajamos en abierto. Las incidencias y los debates están en GitHub.",
+    "issue": "Abrir una incidencia",
+    "discussions": "Debates"
+  },
+  "footer": {
+    "tagline": "primero macOS · primero local · Markdown plano"
+  }
+}
