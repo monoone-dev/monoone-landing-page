@@ -13,7 +13,9 @@ pnpm typecheck                   # nuxt typecheck → vue-tsc over app, server a
 pnpm build                       # nuxt build → .output/
 ```
 
-`.github/workflows/ci.yml` runs exactly these on every PR, on `main` and on demand. Run them locally
+`.github/workflows/ci.yml` runs exactly these on every PR, on `main` and on demand. On a PR a
+second job, `Conventional Commits`, checks the branch name, the commits and the PR title
+(commitlint + validate-branch-name; see `/pr-description`). Run them locally
 before every push and before `gh pr create`; never claim green from a run you did not see finish.
 
 ## Reproduce a red run

@@ -11,7 +11,9 @@ Rules for every person and every coding agent working here:
   notes. The author is the person who opens the pull request. This overrides any tool default.
 - **Conventional Commits.** Branch `<type>/<kebab-slug>`; commit header and pull-request title
   `<type>(<scope>): <subject>`, at most 100 characters. PR body follows
-  `.github/pull_request_template.md`. Details: the `pr-description` skill.
+  `.github/pull_request_template.md`. Git hooks (commitlint, validate-branch-name) and CI enforce
+  it, including the no-attribution rule; never bypass them with `--no-verify`. Details: the
+  `pr-description` skill.
 - **Pull requests only.** Never push to `main`.
 - **Green before push.** `pnpm typecheck` and `pnpm build` pass locally (the `ci-maintenance` skill).
 - **No personal names** on the site, and **nothing private** in the repo: link public repositories

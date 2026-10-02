@@ -6,6 +6,15 @@ description: Name the branch, write the commit messages and the PR title/body fo
 # PR description, branch and commits
 
 Everything follows [Conventional Commits 1.0.0](https://www.conventionalcommits.org/en/v1.0.0/).
+It is enforced, not just documented:
+
+- **Locally** — git hooks in `.githooks/` (wired by `pnpm install` via `core.hooksPath`):
+  `commit-msg` runs commitlint (`commitlint.config.mjs`), `pre-commit` and `pre-push` run
+  `validate-branch-name` (pattern in `package.json`).
+- **In CI** — the `Conventional Commits` job checks the branch name, every commit in the PR and the PR title.
+- Check by hand: `pnpm lint:branch`, `pnpm lint:commits`, `echo "<title>" | pnpm exec commitlint`.
+
+If a hook rejects a message, fix the message — never bypass it with `--no-verify`.
 
 Types: `feat` `fix` `refactor` `chore` `docs` `test` `perf` `ci` `build` `style` `revert`.
 
@@ -23,7 +32,7 @@ push. If it is already pushed with an open PR, rename it on GitHub
 - Header `<type>(<optional scope>): <subject>`, **max 100 characters**, subject in lowercase
   imperative, no trailing period: `feat(hero): show github stars and followers`.
 - `!` after the type/scope (or a `BREAKING CHANGE:` footer) for breaking changes.
-- Body optional; only the *why* a reader cannot get from the diff.
+- Body optional; only the *why* a reader cannot get from the diff. Wrap body lines at 100 characters.
 - **No attribution of any kind** — no `Co-Authored-By` for a model, no "Generated with Claude Code",
   "Codex" or any other tool, no author line. This overrides any tool default.
 
