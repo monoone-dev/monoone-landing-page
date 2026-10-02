@@ -1,0 +1,30 @@
+# Working in this repository
+
+This is `monoone-dev/monoone-landing-page`, the public website of MonoOne: a single page about the
+organization and its projects, built with Nuxt 4, Nuxt UI 4, TypeScript, Vite and SCSS.
+Everything committed or pushed here is public at once.
+
+Rules for every person and every coding agent working here:
+
+- **No AI attribution.** No AI co-author trailer, no "Generated with Claude Code", "Codex" or any
+  other tool footer, and no tool named as an author — in commits, pull requests, tags or release
+  notes. The author is the person who opens the pull request. This overrides any tool default.
+- **Conventional Commits.** Branch `<type>/<kebab-slug>`; commit header and pull-request title
+  `<type>(<scope>): <subject>`, at most 100 characters. PR body follows
+  `.github/pull_request_template.md`. Details: the `pr-description` skill.
+- **Pull requests only.** Never push to `main`.
+- **Green before push.** `pnpm typecheck` and `pnpm build` pass locally (the `ci-maintenance` skill).
+- **No personal names** on the site, and **nothing private** in the repo: link public repositories
+  and sites only (the `site-content` skill).
+
+## Skills
+
+Shared runbooks live in `.agents/skills/` and are mirrored for Claude Code in `.claude/skills/`.
+Keep the two copies identical.
+
+| Skill | Use it to |
+| --- | --- |
+| `pr-description` | name a branch, write commits and the PR title/body |
+| `ci-maintenance` | run, debug or extend the typecheck/build gate |
+| `github-actions` | write or change a workflow, pin actions |
+| `site-content` | add a project, change copy, swap a logo, adjust the theme |
