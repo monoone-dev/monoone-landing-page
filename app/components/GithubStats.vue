@@ -1,9 +1,8 @@
 <script setup lang="ts">
 import { site } from '~/data/site'
 
+const { t } = useI18n()
 const { data: stats } = useGithubStats()
-
-const plural = (n: number, word: string) => `${n} ${word}${n === 1 ? '' : 's'}`
 </script>
 
 <template>
@@ -16,7 +15,7 @@ const plural = (n: number, word: string) => `${n} ${word}${n === 1 ? '' : 's'}`
         :to="site.github"
         target="_blank"
         icon="i-lucide-star"
-        :label="plural(stats.stars, 'star')"
+        :label="t('stats.stars', stats.stars)"
         color="neutral"
         variant="soft"
         size="xs"
@@ -25,7 +24,7 @@ const plural = (n: number, word: string) => `${n} ${word}${n === 1 ? '' : 's'}`
         :to="site.github"
         target="_blank"
         icon="i-lucide-users"
-        :label="plural(stats.followers, 'follower')"
+        :label="t('stats.followers', stats.followers)"
         color="neutral"
         variant="soft"
         size="xs"

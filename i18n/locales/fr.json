@@ -1,0 +1,100 @@
+{
+  "meta": {
+    "title": "De petits logiciels pour Mac, privés par défaut",
+    "description": "Nous créons des outils qui gardent vos données sur votre appareil et vous laissent des fichiers qui vous appartiennent."
+  },
+  "nav": {
+    "principles": "Principes",
+    "projects": "Projets",
+    "contact": "Contact",
+    "language": "Langue",
+    "github": "MonoOne sur GitHub"
+  },
+  "hero": {
+    "badge": "Logiciels indépendants · macOS",
+    "title1": "De petits logiciels.",
+    "title2": "Privés par défaut.",
+    "description": "Nous créons des outils qui gardent vos données sur votre appareil et vous laissent des fichiers qui vous appartiennent.",
+    "cta": "Découvrir les projets"
+  },
+  "stats": {
+    "stars": "{n} étoile | {n} étoile | {n} étoiles",
+    "followers": "{n} abonné | {n} abonné | {n} abonnés"
+  },
+  "principles": {
+    "title": "Ce en quoi nous croyons",
+    "description": "Quatre règles que suit chaque produit MonoOne. Sans exception, sans petites lignes.",
+    "items": {
+      "localFirst": {
+        "title": "Le local d'abord",
+        "description": "Vos données restent sur votre appareil. L'essentiel fonctionne hors ligne et sans compte."
+      },
+      "ownFiles": {
+        "title": "Des fichiers à vous",
+        "description": "Du Markdown brut sur le disque. Pas de format propriétaire, pas d'enfermement, pas d'export laborieux."
+      },
+      "private": {
+        "title": "Privé par défaut",
+        "description": "Les fonctions cloud sont facultatives et les données sensibles sont masquées avant l'envoi. Le partage est chiffré de bout en bout."
+      },
+      "mac": {
+        "title": "Conçu pour le Mac",
+        "description": "Natif, signé et notarié. Apple Silicon et Intel, macOS 13.4 ou ultérieur."
+      }
+    }
+  },
+  "projects": {
+    "title": "Projets",
+    "description": "Un seul produit, fait avec soin. D'autres viendront quand ils seront prêts.",
+    "star": "Étoile · {n}"
+  },
+  "indexOne": {
+    "status": "Gratuit en accès anticipé",
+    "tagline": "Des notes de réunion sécurisées et 100 % locales pour macOS.",
+    "description": "IndexOne enregistre vos appels, les transcrit et rédige une note structurée en Markdown brut qui vous appartient, le tout sur votre Mac. Enregistrements, transcriptions et notes restent à 100 % sur votre appareil : aucun compte, aucun traitement dans le cloud. Votre bibliothèque est stockée dans une base de données chiffrée, et rien n'est envoyé nulle part sauf si vous le choisissez explicitement.",
+    "meta": {
+      "macos": "macOS 13.4+",
+      "arch": "Apple Silicon et Intel",
+      "noAccount": "Aucun compte requis"
+    },
+    "links": {
+      "download": "Télécharger pour Mac",
+      "site": "index-one.io"
+    },
+    "features": {
+      "bothSides": {
+        "title": "Les deux côtés de l'appel",
+        "description": "Votre micro et l'autre côté, réunis dans une transcription claire."
+      },
+      "whisper": {
+        "title": "Whisper sur l'appareil",
+        "description": "La transcription s'exécute en local avec Metal. Aucune transcription dans le cloud."
+      },
+      "notes": {
+        "title": "Des notes à vous",
+        "description": "Résumé, décisions et actions en Markdown dans votre coffre Obsidian."
+      },
+      "answers": {
+        "title": "Des réponses sourcées",
+        "description": "Posez vos questions pendant l'appel ou des mois plus tard et voyez de quelles réunions vient chaque réponse."
+      },
+      "encrypted": {
+        "title": "Chiffré et verrouillable",
+        "description": "Une base de données chiffrée sur votre Mac, avec verrouillage par dossier via Touch ID."
+      },
+      "ai": {
+        "title": "Votre IA, votre choix",
+        "description": "Modèle sur l'appareil ou cloud facultatif. Un serveur MCP local pour vos propres agents."
+      }
+    }
+  },
+  "contact": {
+    "title": "Un bug ou une idée ?",
+    "description": "Nous travaillons en toute transparence. Les tickets et les discussions sont sur GitHub.",
+    "issue": "Ouvrir un ticket",
+    "discussions": "Discussions"
+  },
+  "footer": {
+    "tagline": "macOS d'abord · local d'abord · Markdown brut"
+  }
+}

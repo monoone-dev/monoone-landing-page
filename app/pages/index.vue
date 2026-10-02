@@ -1,12 +1,14 @@
 <script setup lang="ts">
 import { principles, projects, site } from '~/data/site'
+
+const { t } = useI18n()
 </script>
 
 <template>
   <div>
     <UPageHero
       class="mono-grid"
-      :ui="{ title: 'text-balance', description: 'text-balance' }"
+      :ui="{ title: 'text-4xl sm:text-7xl text-balance hyphens-auto', description: 'text-balance' }"
     >
       <template #headline>
         <div class="flex flex-col items-center gap-8">
@@ -14,7 +16,7 @@ import { principles, projects, site } from '~/data/site'
             <MonoMark class="size-20 sm:size-24" />
           </div>
           <UBadge
-            label="Independent software · macOS"
+            :label="t('hero.badge')"
             color="neutral"
             variant="outline"
             class="enter rounded-full font-mono px-3"
@@ -27,18 +29,18 @@ import { principles, projects, site } from '~/data/site'
         <span
           class="enter block"
           style="--enter-delay: 200ms"
-        >Small software.</span>
+        >{{ t('hero.title1') }}</span>
         <span
           class="enter block text-muted font-light"
           style="--enter-delay: 300ms"
-        >Private by default.</span>
+        >{{ t('hero.title2') }}</span>
       </template>
 
       <template #description>
         <span
           class="enter block"
           style="--enter-delay: 420ms"
-        >{{ site.description }}</span>
+        >{{ t('hero.description') }}</span>
       </template>
 
       <template #links>
@@ -48,7 +50,7 @@ import { principles, projects, site } from '~/data/site'
             style="--enter-delay: 540ms"
           >
             <UButton
-              label="Meet Projects"
+              :label="t('hero.cta')"
               to="#projects"
               trailing-icon="i-lucide-arrow-down"
               size="xl"
@@ -71,16 +73,20 @@ import { principles, projects, site } from '~/data/site'
 
     <UPageSection
       id="principles"
-      title="What we believe"
-      description="Four rules every MonoOne product follows. No exceptions, no fine print."
+      :title="t('principles.title')"
+      :description="t('principles.description')"
     >
       <div class="grid gap-8 sm:grid-cols-2 lg:grid-cols-4">
         <Reveal
           v-for="(principle, i) in principles"
-          :key="principle.title"
+          :key="principle.key"
           :delay="i * 90"
         >
-          <UPageFeature v-bind="principle" />
+          <UPageFeature
+            :icon="principle.icon"
+            :title="t(`principles.items.${principle.key}.title`)"
+            :description="t(`principles.items.${principle.key}.description`)"
+          />
         </Reveal>
       </div>
     </UPageSection>
@@ -89,8 +95,8 @@ import { principles, projects, site } from '~/data/site'
 
     <UPageSection
       id="projects"
-      title="Projects"
-      description="One focused product, built carefully. More when it's ready."
+      :title="t('projects.title')"
+      :description="t('projects.description')"
     >
       <Reveal>
         <ProjectShowcase
@@ -104,12 +110,12 @@ import { principles, projects, site } from '~/data/site'
     <UPageSection id="contact">
       <Reveal>
         <UPageCTA
-          title="Found a bug or have an idea?"
-          description="We build in the open. Issues and discussions live on GitHub."
+          :title="t('contact.title')"
+          :description="t('contact.description')"
           variant="subtle"
           :links="[
-            { label: 'Open an issue', to: 'https://github.com/monoone-dev/index-one-landing-page/issues', target: '_blank', icon: 'i-lucide-circle-dot' },
-            { label: 'Discussions', to: 'https://github.com/monoone-dev/index-one-landing-page/discussions', target: '_blank', icon: 'i-lucide-messages-square', color: 'neutral', variant: 'outline' }
+            { label: t('contact.issue'), to: site.issues, target: '_blank', icon: 'i-lucide-circle-dot' },
+            { label: t('contact.discussions'), to: site.discussions, target: '_blank', icon: 'i-lucide-messages-square', color: 'neutral', variant: 'outline' }
           ]"
         />
       </Reveal>

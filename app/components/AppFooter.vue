@@ -1,6 +1,7 @@
 <script setup lang="ts">
 import { site } from '~/data/site'
 
+const { t } = useI18n()
 const year = new Date().getFullYear()
 </script>
 
@@ -13,7 +14,7 @@ const year = new Date().getFullYear()
     </template>
 
     <p class="text-sm text-dimmed font-mono">
-      macOS-first · local-first · plain Markdown
+      {{ t('footer.tagline') }}
     </p>
 
     <template #right>
@@ -23,7 +24,7 @@ const year = new Date().getFullYear()
         icon="i-simple-icons-github"
         color="neutral"
         variant="ghost"
-        aria-label="GitHub"
+        :aria-label="t('nav.github')"
       />
     </template>
   </UFooter>

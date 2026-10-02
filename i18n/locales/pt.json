@@ -1,0 +1,100 @@
+{
+  "meta": {
+    "title": "Software pequeno para Mac, privado por padrão",
+    "description": "Criamos ferramentas que mantêm seus dados no seu dispositivo e deixam com você arquivos que são seus."
+  },
+  "nav": {
+    "principles": "Princípios",
+    "projects": "Projetos",
+    "contact": "Contato",
+    "language": "Idioma",
+    "github": "MonoOne no GitHub"
+  },
+  "hero": {
+    "badge": "Software independente · macOS",
+    "title1": "Software pequeno.",
+    "title2": "Privado por padrão.",
+    "description": "Criamos ferramentas que mantêm seus dados no seu dispositivo e deixam com você arquivos que são seus.",
+    "cta": "Conheça os projetos"
+  },
+  "stats": {
+    "stars": "{n} estrelas | {n} estrela | {n} estrelas",
+    "followers": "{n} seguidores | {n} seguidor | {n} seguidores"
+  },
+  "principles": {
+    "title": "No que acreditamos",
+    "description": "Quatro regras que todo produto MonoOne segue. Sem exceções, sem letras miúdas.",
+    "items": {
+      "localFirst": {
+        "title": "Local primeiro",
+        "description": "Seus dados ficam no seu dispositivo. Tudo o que é essencial funciona offline e sem conta."
+      },
+      "ownFiles": {
+        "title": "Arquivos que são seus",
+        "description": "Markdown simples no disco. Sem formatos proprietários, sem aprisionamento, sem exportações trabalhosas."
+      },
+      "private": {
+        "title": "Privado por padrão",
+        "description": "Os recursos na nuvem são opcionais e os dados sensíveis são removidos antes do envio. O compartilhamento é criptografado de ponta a ponta."
+      },
+      "mac": {
+        "title": "Feito para o Mac",
+        "description": "Nativo, assinado e notarizado. Apple Silicon e Intel, macOS 13.4 ou posterior."
+      }
+    }
+  },
+  "projects": {
+    "title": "Projetos",
+    "description": "Um produto focado, feito com cuidado. Outros virão quando estiverem prontos.",
+    "star": "Estrela · {n}"
+  },
+  "indexOne": {
+    "status": "Grátis em acesso antecipado",
+    "tagline": "Notas de reunião seguras e 100% locais para macOS.",
+    "description": "O IndexOne grava suas chamadas, transcreve e escreve uma nota estruturada em Markdown simples que é sua, tudo no seu Mac. Gravações, transcrições e notas ficam 100% no seu dispositivo: sem conta e sem processamento na nuvem. Sua biblioteca fica em um banco de dados criptografado, e nada é enviado a lugar nenhum, a menos que você escolha isso explicitamente.",
+    "meta": {
+      "macos": "macOS 13.4+",
+      "arch": "Apple Silicon e Intel",
+      "noAccount": "Sem conta"
+    },
+    "links": {
+      "download": "Baixar para Mac",
+      "site": "index-one.io"
+    },
+    "features": {
+      "bothSides": {
+        "title": "Os dois lados da chamada",
+        "description": "Seu microfone e o outro lado, unidos em uma transcrição clara."
+      },
+      "whisper": {
+        "title": "Whisper no dispositivo",
+        "description": "A transcrição roda localmente com Metal. Sem transcrição na nuvem."
+      },
+      "notes": {
+        "title": "Notas que são suas",
+        "description": "Resumo, decisões e tarefas em Markdown no seu cofre do Obsidian."
+      },
+      "answers": {
+        "title": "Respostas com fontes",
+        "description": "Pergunte durante a chamada ou meses depois e veja de quais reuniões veio cada resposta."
+      },
+      "encrypted": {
+        "title": "Criptografado e bloqueável",
+        "description": "Um banco de dados criptografado no seu Mac, com bloqueio por pasta via Touch ID."
+      },
+      "ai": {
+        "title": "Sua IA, sua escolha",
+        "description": "Modelo no dispositivo ou nuvem opcional. Um servidor MCP local para seus próprios agentes."
+      }
+    }
+  },
+  "contact": {
+    "title": "Encontrou um bug ou tem uma ideia?",
+    "description": "Trabalhamos de forma aberta. Issues e discussões ficam no GitHub.",
+    "issue": "Abrir uma issue",
+    "discussions": "Discussões"
+  },
+  "footer": {
+    "tagline": "macOS primeiro · local primeiro · Markdown simples"
+  }
+}

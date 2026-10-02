@@ -9,7 +9,9 @@ description: Change what the MonoOne website says or shows — add or edit a pro
 
 | What | Where |
 | --- | --- |
-| All copy: tagline, principles, projects | `app/data/site.ts` |
+| All visible text, per language | `i18n/locales/{en,pl,es,it,fr,pt,de}.json` |
+| Page structure: links, icons, translation keys | `app/data/site.ts` |
+| Languages, default, browser detection | `i18n` block in `nuxt.config.ts`, plural rules in `i18n/i18n.config.ts` |
 | Page layout (hero, principles, projects, contact) | `app/pages/index.vue` |
 | Project card | `app/components/ProjectShowcase.vue` |
 | MonoOne mark (theme-aware SVG) | `app/components/MonoMark.vue`, colors in `--mark-*` in `app/assets/scss/main.scss` |
@@ -25,11 +27,24 @@ description: Change what the MonoOne website says or shows — add or edit a pro
 - **Privacy claims must be true.** "100% local" needs its qualifier if a feature can send data
   (opt-in cloud AI, E2EE sharing): say "unless you explicitly choose to". Do not claim "no telemetry"
   or "everything is encrypted" unless it is confirmed.
-- English copy, short sentences, no marketing superlatives.
+- Short sentences, no marketing superlatives. Product names (MonoOne, IndexOne, Obsidian, Whisper)
+  are never translated.
+
+## Translations
+
+- English (`en.json`) is the source and the default; every key must exist in all seven files.
+  A missing key silently falls back to English, so add new text to all of them in the same change.
+- Plurals use vue-i18n choices: `zero | one | other` (`"{n} stars | {n} star | {n} stars"`).
+  Polish has four: `zero | one | few | many` (`"{n} gwiazdek | {n} gwiazdka | {n} gwiazdki | {n} gwiazdek"`).
+- Use gender-neutral phrasing (Polish: avoid `-łeś/-łaś` forms).
+- Escape vue-i18n special characters (`@ { } | $`) as `{'@'}` if they ever appear in copy.
+- Adding a language: a JSON file, an entry in `i18n.locales` in `nuxt.config.ts`, and check that
+  `@nuxt/ui/locale` has it (the language picker uses it).
 
 ## Add a project
 
-1. Append an entry to `projects` in `app/data/site.ts` (`repo` is the public repo whose stars are shown).
+1. Append an entry to `projects` in `app/data/site.ts` (`key` is its translation namespace, `repo`
+   the public repo whose stars are shown) and add that namespace to every locale file.
 2. Add its logo as a component next to `IndexOneMark.vue`: inline the official SVG, prefix every
    gradient/filter id with `useId()` so two copies on a page do not collide.
 3. With two or more projects, check the Projects section layout and the hero button target.
@@ -42,4 +57,4 @@ the MonoOne mark inverts in dark mode via `--mark-*`; product icons keep their o
 ## Verify
 
 `pnpm typecheck && pnpm build`, then check the page in light and dark mode at 375px and desktop
-width, with no horizontal scroll.
+width, with no horizontal scroll — in every language (German and Polish words are the longest).
