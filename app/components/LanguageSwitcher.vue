@@ -1,18 +1,6 @@
 <script setup lang="ts">
-import type { DropdownMenuItem } from '@nuxt/ui'
-import { flags } from '~/data/site'
-
-const { t, locale, locales, setLocale } = useI18n()
-
-const items = computed<DropdownMenuItem[]>(() =>
-  locales.value.map(l => ({
-    label: l.name,
-    icon: flags[l.code],
-    type: 'checkbox' as const,
-    checked: l.code === locale.value,
-    onSelect: () => setLocale(l.code)
-  }))
-)
+const { t } = useI18n()
+const { items, icon } = useLanguageMenu()
 </script>
 
 <template>
@@ -22,7 +10,7 @@ const items = computed<DropdownMenuItem[]>(() =>
     :ui="{ content: 'min-w-44' }"
   >
     <UButton
-      :icon="flags[locale]"
+      :icon="icon"
       color="neutral"
       variant="ghost"
       square
