@@ -8,7 +8,14 @@
     "projects": "项目",
     "contact": "联系",
     "language": "语言",
-    "github": "GitHub 上的 MonoOne"
+    "github": "GitHub 上的 MonoOne",
+    "menu": "菜单"
+  },
+  "theme": {
+    "label": "主题",
+    "light": "浅色",
+    "dark": "深色",
+    "system": "跟随系统"
   },
   "hero": {
     "badge": "独立软件 · macOS",

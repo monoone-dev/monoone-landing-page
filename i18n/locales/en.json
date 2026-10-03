@@ -8,7 +8,14 @@
     "projects": "Projects",
     "contact": "Contact",
     "language": "Language",
-    "github": "MonoOne on GitHub"
+    "github": "MonoOne on GitHub",
+    "menu": "Menu"
+  },
+  "theme": {
+    "label": "Theme",
+    "light": "Light",
+    "dark": "Dark",
+    "system": "System"
   },
   "hero": {
     "badge": "Independent software · macOS",
