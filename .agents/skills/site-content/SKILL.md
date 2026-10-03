@@ -11,7 +11,8 @@ description: Change what the MonoOne website says or shows — add or edit a pro
 | --- | --- |
 | All visible text, per language | `i18n/locales/{en,pl,es,it,fr,pt,de,zh,ja}.json` |
 | Page structure: links, icons, translation keys | `app/data/site.ts` |
-| Language picker (flag button) | `app/components/LanguageSwitcher.vue`, flags in `app/data/site.ts` |
+| Header: desktop bar, tablet and phone menus | `app/components/AppHeader.vue` |
+| Language and theme menus (shared by the bar and the phone menu) | `app/composables/useLanguageMenu.ts`, `app/composables/useThemeMenu.ts`; buttons in `LanguageSwitcher.vue`, `ThemeMenu.vue`; flags in `app/data/site.ts` |
 | Languages, default, browser detection | `i18n` block in `nuxt.config.ts`, plural rules in `i18n/i18n.config.ts` |
 | Page layout (hero, principles, projects, contact) | `app/pages/index.vue` |
 | Project card | `app/components/ProjectShowcase.vue` |
@@ -52,6 +53,17 @@ description: Change what the MonoOne website says or shows — add or edit a pro
 2. Add its logo as a component next to `IndexOneMark.vue`: inline the official SVG, prefix every
    gradient/filter id with `useId()` so two copies on a page do not collide.
 3. With two or more projects, check the Projects section layout and the hero button target.
+
+## Header
+
+Three layouts, same pattern as index-one-landing-page:
+
+- **Desktop (≥ 1024px)** — links in the bar, then flag, theme and GitHub buttons.
+- **Tablet (640–1023px)** — links move into a menu button; flag, theme and GitHub stay in the bar.
+- **Phone (< 640px)** — only the logo and one menu: links, then Language and Theme submenus, then GitHub.
+
+A new header control goes into the bar *and* into the phone menu (build its items in a composable so
+both share them). Theme offers Light, Dark and System; System (the default) follows the OS.
 
 ## Logos
 

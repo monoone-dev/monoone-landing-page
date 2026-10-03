@@ -8,7 +8,7 @@ const { t } = useI18n()
   <div>
     <UPageHero
       class="mono-grid"
-      :ui="{ title: 'text-4xl sm:text-7xl text-balance hyphens-auto', description: 'text-balance' }"
+      :ui="{ title: 'text-4xl sm:text-7xl text-balance wrap-break-word', description: 'text-balance' }"
     >
       <template #headline>
         <div class="flex flex-col items-center gap-8">
