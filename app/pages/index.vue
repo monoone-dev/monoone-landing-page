@@ -100,9 +100,11 @@ const { t } = useI18n()
     >
       <Reveal>
         <ProjectShowcase
-          v-for="project in projects"
+          v-for="(project, i) in projects"
           :key="project.name"
           :project="project"
+          :index="i"
+          :class="i > 0 ? 'mt-10' : undefined"
         />
       </Reveal>
     </UPageSection>

@@ -2,11 +2,29 @@
 import type { Project } from '~/data/site'
 
 import { site } from '~/data/site'
+import IndexOneMark from './IndexOneMark.vue'
+import RigOneMark from './RigOneMark.vue'
 
-const props = defineProps<{ project: Project }>()
+/* The symbol is picked by name from `site.ts`, but the components are imported HERE rather
+   than resolved from a string: Nuxt auto-imports what it can see statically, so
+   `<component :is="'RigOneMark'" />` compiles to nothing and the card loses its mark with no
+   error anywhere. Measured on this page before the second project shipped. */
+const marks: Record<string, Component> = { IndexOneMark, RigOneMark }
+
+const props = withDefaults(defineProps<{ project: Project, index?: number }>(), { index: 0 })
 
 const { t } = useI18n()
 const k = (path: string) => t(`${props.project.key}.${path}`)
+
+// `IndexOne` → bold `Index` + light `One`. The house writes every product name this way,
+// so the split belongs here once rather than being spelled out per card.
+const word = computed(() => {
+  const name = props.project.name
+  return name.endsWith('One') ? { head: name.slice(0, -3), tail: 'One' } : { head: name, tail: '' }
+})
+
+const counter = computed(() => String(props.index + 1).padStart(2, '0'))
+const mark = computed(() => marks[props.project.mark])
 
 const { data: stats } = useGithubStats()
 const stars = computed(() => stats.value?.repos[props.project.repo])
@@ -23,11 +41,11 @@ const stars = computed(() => stats.value?.repos[props.project.repo])
             variant="solid"
             class="rounded-full"
           />
-          <span class="mono-index text-sm">01</span>
+          <span class="mono-index text-sm">{{ counter }}</span>
         </div>
 
         <h3 class="wordmark mt-5 text-4xl sm:text-5xl text-highlighted">
-          <b>Index</b> <span>One</span>
+          <b>{{ word.head }}</b> <span>{{ word.tail }}</span>
         </h3>
         <p class="mt-3 text-xl font-medium text-toned text-balance">
           {{ k('tagline') }}
@@ -71,7 +89,7 @@ const stars = computed(() => stats.value?.repos[props.project.repo])
       </div>
 
       <div class="showcase__icon order-first mx-auto w-44 sm:w-56 lg:order-none lg:w-72">
-        <IndexOneMark />
+        <component :is="mark" />
       </div>
     </div>
 

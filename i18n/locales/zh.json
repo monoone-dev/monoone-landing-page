@@ -52,7 +52,7 @@
   },
   "projects": {
     "title": "项目",
-    "description": "一款专注的产品，用心打造。更多产品会在准备好后推出。",
+    "description": "两款专注的产品，认真打磨。其余的等做好再说。",
     "star": "星标 · {n}"
   },
   "indexOne": {
@@ -92,6 +92,46 @@
       "ai": {
         "title": "你的 AI，你做主",
         "description": "使用设备端模型，或主动选择云端模型。还有一个本地 MCP 服务器，供你自己的智能体使用。"
+      }
+    }
+  },
+  "rigOne": {
+    "status": "自由且开源",
+    "tagline": "面向编程智能体的原生 macOS 控制室。",
+    "description": "RigOne 把一排编程智能体变成一张看得见的图。智能体定义一次，放到画布上，连好步骤，再对着你 Mac 上的一个文件夹运行这张图。Claude Code 与 Codex 平起平坐，互不依赖的分支真的同时跑，而一次运行留下的证据比它所在的终端活得更久。",
+    "meta": {
+      "macos": "macOS 13+",
+      "silicon": "Apple Silicon",
+      "ownCli": "用你自己的智能体 CLI"
+    },
+    "links": {
+      "download": "下载 Mac 版",
+      "site": "了解更多"
+    },
+    "features": {
+      "canvas": {
+        "title": "看得见的工作流",
+        "description": "步骤、命令、检查、循环与重试，统统存成一张图。"
+      },
+      "parallel": {
+        "title": "真正的并行",
+        "description": "互不依赖的分支彼此重叠，而不是排队等一个执行者。"
+      },
+      "watch": {
+        "title": "读得懂的运行",
+        "description": "一边是计划，一边是每个智能体说的话，问题就钉在那里。"
+      },
+      "agents": {
+        "title": "可复用的智能体",
+        "description": "供应商、模型、文件权限、工具与技能，按角色选一次。"
+      },
+      "context": {
+        "title": "属于项目的知识",
+        "description": "说明与笔记放在磁盘上，还能看清这次运行真正用了什么。"
+      },
+      "evidence": {
+        "title": "留得住的证据",
+        "description": "回执、交接与诊断，在输出消失之后依然还在。"
       }
     }
   },

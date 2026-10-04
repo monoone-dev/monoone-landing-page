@@ -52,7 +52,7 @@
   },
   "projects": {
     "title": "Projekte",
-    "description": "Ein fokussiertes Produkt, mit Sorgfalt gebaut. Mehr, wenn es so weit ist.",
+    "description": "Zwei fokussierte Produkte, sorgfältig gebaut. Mehr, wenn sie fertig sind.",
     "star": "Stern · {n}"
   },
   "indexOne": {
@@ -92,6 +92,46 @@
       "ai": {
         "title": "Deine KI, deine Wahl",
         "description": "Modell auf dem Gerät oder optionale Cloud. Ein lokaler MCP-Server für deine eigenen Agenten."
+      }
+    }
+  },
+  "rigOne": {
+    "status": "Frei und quelloffen",
+    "tagline": "Eine native macOS-Leitstelle für Coding-Agenten.",
+    "description": "RigOne macht aus einer Reihe von Coding-Agenten einen Graphen, den man sieht. Beschreibe einen Agenten einmal, setz ihn auf die Leinwand, verbinde die Schritte und lass den Graphen auf einem Ordner auf deinem Mac laufen. Claude Code und Codex sind gleichberechtigt, unabhängige Zweige laufen wirklich gleichzeitig, und die Belege eines Laufs überleben das Terminal.",
+    "meta": {
+      "macos": "macOS 13+",
+      "silicon": "Apple Silicon",
+      "ownCli": "Deine eigene Agenten-CLI"
+    },
+    "links": {
+      "download": "Für Mac laden",
+      "site": "Mehr erfahren"
+    },
+    "features": {
+      "canvas": {
+        "title": "Sichtbare Workflows",
+        "description": "Schritte, Befehle, Prüfungen, Schleifen und Wiederholungen als ein Graph."
+      },
+      "parallel": {
+        "title": "Echte Parallelität",
+        "description": "Unabhängige Zweige überlappen sich, statt hinter einem Arbeiter zu warten."
+      },
+      "watch": {
+        "title": "Ein lesbarer Lauf",
+        "description": "Der Plan auf der einen Seite, jede Agentenstimme auf der anderen."
+      },
+      "agents": {
+        "title": "Wiederverwendbare Agenten",
+        "description": "Anbieter, Modell, Dateizugriff, Werkzeuge und Fähigkeiten je Rolle."
+      },
+      "context": {
+        "title": "Wissen am Projekt",
+        "description": "Anweisungen und Notizen auf der Platte, plus Nachweis des Gebrauchten."
+      },
+      "evidence": {
+        "title": "Belege, die bleiben",
+        "description": "Belege, Übergaben und Diagnosen bleiben, wenn die Ausgabe weg ist."
       }
     }
   },

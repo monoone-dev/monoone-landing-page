@@ -52,7 +52,7 @@
   },
   "projects": {
     "title": "Projets",
-    "description": "Un seul produit, fait avec soin. D'autres viendront quand ils seront prêts.",
+    "description": "Deux produits ciblés, faits avec soin. D'autres quand ils seront prêts.",
     "star": "Étoile · {n}"
   },
   "indexOne": {
@@ -92,6 +92,46 @@
       "ai": {
         "title": "Votre IA, votre choix",
         "description": "Modèle sur l'appareil ou cloud facultatif. Un serveur MCP local pour vos propres agents."
+      }
+    }
+  },
+  "rigOne": {
+    "status": "Libre et open source",
+    "tagline": "Une salle de contrôle native macOS pour agents de code.",
+    "description": "RigOne transforme une rangée d'agents de code en un graphe que l'on voit. Définissez un agent une fois, posez-le sur la toile, reliez les étapes et lancez le graphe sur un dossier de votre Mac. Claude Code et Codex sont à égalité, les branches indépendantes tournent vraiment en même temps et les traces d'une exécution survivent au terminal.",
+    "meta": {
+      "macos": "macOS 13+",
+      "silicon": "Apple Silicon",
+      "ownCli": "Votre propre CLI d'agent"
+    },
+    "links": {
+      "download": "Télécharger pour Mac",
+      "site": "En savoir plus"
+    },
+    "features": {
+      "canvas": {
+        "title": "Des flux que l'on voit",
+        "description": "Étapes, commandes, vérifications, boucles et reprises, gardées en graphe."
+      },
+      "parallel": {
+        "title": "Du vrai parallélisme",
+        "description": "Les branches indépendantes se chevauchent au lieu de faire la queue."
+      },
+      "watch": {
+        "title": "Une exécution lisible",
+        "description": "Le plan d'un côté, la parole de chaque agent de l'autre, questions épinglées."
+      },
+      "agents": {
+        "title": "Des agents réutilisables",
+        "description": "Fournisseur, modèle, accès aux fichiers, outils et compétences par rôle."
+      },
+      "context": {
+        "title": "Un savoir par projet",
+        "description": "Instructions et notes sur le disque, et la preuve de ce qui a servi."
+      },
+      "evidence": {
+        "title": "Des traces durables",
+        "description": "Reçus, passations et diagnostics restent quand la sortie a disparu."
       }
     }
   },

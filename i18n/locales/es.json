@@ -52,7 +52,7 @@
   },
   "projects": {
     "title": "Proyectos",
-    "description": "Un producto bien enfocado y hecho con cuidado. Habrá más cuando estén listos.",
+    "description": "Dos productos enfocados, hechos con cuidado. Más cuando estén listos.",
     "star": "Estrella · {n}"
   },
   "indexOne": {
@@ -92,6 +92,46 @@
       "ai": {
         "title": "Tu IA, tu elección",
         "description": "Modelo en el dispositivo o nube opcional. Un servidor MCP local para tus propios agentes."
+      }
+    }
+  },
+  "rigOne": {
+    "status": "Libre y de código abierto",
+    "tagline": "Una sala de control nativa de macOS para agentes de código.",
+    "description": "RigOne convierte una fila de agentes de código en un grafo que se ve. Define un agente una vez, colócalo en el lienzo, conecta los pasos y ejecuta el grafo sobre una carpeta de tu Mac. Claude Code y Codex están en pie de igualdad, las ramas independientes corren de verdad a la vez y las pruebas de una ejecución sobreviven al terminal.",
+    "meta": {
+      "macos": "macOS 13+",
+      "silicon": "Apple Silicon",
+      "ownCli": "Tu propio CLI de agente"
+    },
+    "links": {
+      "download": "Descargar para Mac",
+      "site": "Saber más"
+    },
+    "features": {
+      "canvas": {
+        "title": "Flujos que se ven",
+        "description": "Pasos, comandos, comprobaciones, bucles y reintentos guardados como grafo."
+      },
+      "parallel": {
+        "title": "Paralelismo de verdad",
+        "description": "Las ramas independientes se solapan en vez de hacer cola tras un ejecutor."
+      },
+      "watch": {
+        "title": "Una ejecución legible",
+        "description": "El plan a un lado, lo que dijo cada agente al otro, preguntas fijadas."
+      },
+      "agents": {
+        "title": "Agentes reutilizables",
+        "description": "Proveedor, modelo, acceso a archivos, herramientas y habilidades por rol."
+      },
+      "context": {
+        "title": "Conocimiento por proyecto",
+        "description": "Instrucciones y notas en disco, y prueba de qué usó cada ejecución."
+      },
+      "evidence": {
+        "title": "Pruebas que duran",
+        "description": "Recibos, traspasos y diagnósticos quedan cuando la salida ya no está."
       }
     }
   },

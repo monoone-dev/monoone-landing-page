@@ -52,7 +52,7 @@
   },
   "projects": {
     "title": "Projects",
-    "description": "One focused product, built carefully. More when it's ready.",
+    "description": "Two focused products, built carefully. More when they're ready.",
     "star": "Star · {n}"
   },
   "indexOne": {
@@ -92,6 +92,46 @@
       "ai": {
         "title": "Your AI, your choice",
         "description": "On-device model or opt-in cloud. A local MCP server for your own agents."
+      }
+    }
+  },
+  "rigOne": {
+    "status": "Free and open source",
+    "tagline": "A native macOS control room for coding agents.",
+    "description": "RigOne turns a row of coding agents into one graph you can see. Define an agent once, place it on a canvas, connect the steps, and run the graph against a folder on your Mac. Claude Code and Codex are first-class peers, independent branches really do run at the same time, and the evidence of a run outlives the terminal it came from.",
+    "meta": {
+      "macos": "macOS 13+",
+      "silicon": "Apple Silicon",
+      "ownCli": "Your own agent CLI"
+    },
+    "links": {
+      "download": "Download for Mac",
+      "site": "Learn more"
+    },
+    "features": {
+      "canvas": {
+        "title": "Visual workflows",
+        "description": "Agent steps, commands, checks, loops and retries, saved as a graph you run again."
+      },
+      "parallel": {
+        "title": "Real parallel execution",
+        "description": "Independent branches overlap in time instead of queueing behind one worker."
+      },
+      "watch": {
+        "title": "A run you can read",
+        "description": "The plan on one side, what every agent said on the other, questions pinned."
+      },
+      "agents": {
+        "title": "Reusable agents",
+        "description": "Vendor, model, file access, tools and skills: chosen once per role."
+      },
+      "context": {
+        "title": "Project-scoped knowledge",
+        "description": "Instructions and notes on disk, and proof of what a run actually used."
+      },
+      "evidence": {
+        "title": "Evidence that lasts",
+        "description": "Receipts, handoffs and diagnostics stay after the output is gone."
       }
     }
   },
