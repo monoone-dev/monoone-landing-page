@@ -52,7 +52,7 @@
   },
   "projects": {
     "title": "Projekty",
-    "description": "Jeden dopracowany produkt. Kolejne, gdy będą gotowe.",
+    "description": "Dwa skupione produkty, robione starannie. Więcej, kiedy będą gotowe.",
     "star": "Gwiazdka · {n}"
   },
   "indexOne": {
@@ -92,6 +92,46 @@
       "ai": {
         "title": "Twoje AI, Twój wybór",
         "description": "Model na urządzeniu lub opcjonalnie chmura. Lokalny serwer MCP dla Twoich własnych agentów."
+      }
+    }
+  },
+  "rigOne": {
+    "status": "Darmowe i otwarte",
+    "tagline": "Natywna sterownia agentów kodujących dla macOS.",
+    "description": "RigOne zamienia rząd agentów kodujących w jeden graf, który widać. Opisz agenta raz, postaw go na kanwie, połącz kroki i uruchom graf na folderze na swoim Macu. Claude Code i Codex są równorzędni, niezależne gałęzie naprawdę idą w tym samym czasie, a ślad po biegu żyje dłużej niż terminal, z którego powstał.",
+    "meta": {
+      "macos": "macOS 13+",
+      "silicon": "Apple Silicon",
+      "ownCli": "Twoje własne CLI agenta"
+    },
+    "links": {
+      "download": "Pobierz na Maca",
+      "site": "Dowiedz się więcej"
+    },
+    "features": {
+      "canvas": {
+        "title": "Workflow, które widać",
+        "description": "Kroki agentów, komendy, sprawdzenia, pętle i ponowienia zapisane jako graf."
+      },
+      "parallel": {
+        "title": "Prawdziwa równoległość",
+        "description": "Niezależne gałęzie nakładają się w czasie, zamiast czekać w jednej kolejce."
+      },
+      "watch": {
+        "title": "Bieg, który da się czytać",
+        "description": "Plan po jednej stronie, wypowiedzi agentów po drugiej, pytania przypięte."
+      },
+      "agents": {
+        "title": "Agenci wielokrotnego użytku",
+        "description": "Vendor, model, dostęp do plików, narzędzia i umiejętności wybrane raz na rolę."
+      },
+      "context": {
+        "title": "Wiedza przy projekcie",
+        "description": "Instrukcje i notatki na dysku oraz dowód, z czego bieg naprawdę skorzystał."
+      },
+      "evidence": {
+        "title": "Ślad, który zostaje",
+        "description": "Rachunki, przekazania i diagnostyka zostają, gdy wyjście dawno zniknęło."
       }
     }
   },

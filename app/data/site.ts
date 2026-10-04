@@ -5,6 +5,8 @@ export interface Project {
   /** Translation namespace, e.g. `indexOne` → `indexOne.tagline` */
   key: string
   name: string
+  /** Component that draws the symbol, e.g. `IndexOneMark` */
+  mark: string
   /** Public repo whose stars are shown on the card */
   repo: string
   meta: string[]
@@ -44,6 +46,7 @@ export const projects: Project[] = [
   {
     key: 'indexOne',
     name: 'IndexOne',
+    mark: 'IndexOneMark',
     repo: 'index-one-landing-page',
     meta: ['macos', 'arch', 'noAccount'],
     features: [
@@ -61,6 +64,35 @@ export const projects: Project[] = [
         icon: 'i-lucide-download'
       },
       { key: 'site', to: 'https://index-one.io', icon: 'i-lucide-arrow-up-right' }
+    ]
+  },
+  {
+    key: 'rigOne',
+    name: 'RigOne',
+    mark: 'RigOneMark',
+    // The application repository is private, so the public numbers and the build both live
+    // on the landing repository — the same arrangement IndexOne uses.
+    repo: 'rig-one-landing-page',
+    meta: ['macos', 'silicon', 'ownCli'],
+    features: [
+      { key: 'canvas', icon: 'i-lucide-workflow' },
+      { key: 'parallel', icon: 'i-lucide-split' },
+      { key: 'watch', icon: 'i-lucide-radio' },
+      { key: 'agents', icon: 'i-lucide-users' },
+      { key: 'context', icon: 'i-lucide-book-open' },
+      { key: 'evidence', icon: 'i-lucide-receipt' }
+    ],
+    links: [
+      {
+        key: 'download',
+        to: 'https://github.com/monoone-dev/rig-one-landing-page/releases/latest',
+        icon: 'i-lucide-download'
+      },
+      {
+        key: 'site',
+        to: 'https://monoone-dev.github.io/rig-one-landing-page/',
+        icon: 'i-lucide-arrow-up-right'
+      }
     ]
   }
 ]

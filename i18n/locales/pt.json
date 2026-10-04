@@ -52,7 +52,7 @@
   },
   "projects": {
     "title": "Projetos",
-    "description": "Um produto focado, feito com cuidado. Outros virão quando estiverem prontos.",
+    "description": "Dois produtos focados, feitos com cuidado. Mais quando estiverem prontos.",
     "star": "Estrela · {n}"
   },
   "indexOne": {
@@ -92,6 +92,46 @@
       "ai": {
         "title": "Sua IA, sua escolha",
         "description": "Modelo no dispositivo ou nuvem opcional. Um servidor MCP local para seus próprios agentes."
+      }
+    }
+  },
+  "rigOne": {
+    "status": "Livre e de código aberto",
+    "tagline": "Uma sala de controle nativa do macOS para agentes de código.",
+    "description": "O RigOne transforma uma fila de agentes de código em um grafo que se enxerga. Defina um agente uma vez, coloque-o na tela, ligue os passos e rode o grafo sobre uma pasta do seu Mac. Claude Code e Codex ficam em pé de igualdade, ramos independentes rodam mesmo ao mesmo tempo e as provas de uma execução sobrevivem ao terminal.",
+    "meta": {
+      "macos": "macOS 13+",
+      "silicon": "Apple Silicon",
+      "ownCli": "A sua CLI de agente"
+    },
+    "links": {
+      "download": "Baixar para Mac",
+      "site": "Saiba mais"
+    },
+    "features": {
+      "canvas": {
+        "title": "Fluxos que se enxergam",
+        "description": "Passos, comandos, verificações, laços e tentativas salvos como um grafo."
+      },
+      "parallel": {
+        "title": "Paralelismo de verdade",
+        "description": "Ramos independentes se sobrepõem em vez de esperar atrás de um executor."
+      },
+      "watch": {
+        "title": "Uma execução legível",
+        "description": "O plano de um lado, a fala de cada agente do outro, perguntas fixadas."
+      },
+      "agents": {
+        "title": "Agentes reutilizáveis",
+        "description": "Fornecedor, modelo, acesso a arquivos, ferramentas e habilidades por papel."
+      },
+      "context": {
+        "title": "Conhecimento do projeto",
+        "description": "Instruções e notas em disco, e a prova do que a execução usou."
+      },
+      "evidence": {
+        "title": "Provas que ficam",
+        "description": "Recibos, repasses e diagnósticos ficam quando a saída já se foi."
       }
     }
   },
