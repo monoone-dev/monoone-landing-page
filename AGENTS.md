@@ -21,8 +21,10 @@ Rules for every person and every coding agent working here:
 
 ## Skills
 
-Shared runbooks live in `.agents/skills/` and are mirrored for Claude Code in `.claude/skills/`.
-Keep the two copies identical.
+Shared runbooks live in `.agents/skills/`. `.claude/skills/<name>` is a relative symlink to
+`.agents/skills/<name>`. Edit only `.agents/skills`, and when you add a skill, add its symlink too
+(`ln -s ../../.agents/skills/<name> .claude/skills/<name>`). `pnpm lint:skills` (also in CI) fails
+when a link is missing or points elsewhere.
 
 | Skill | Use it to |
 | --- | --- |
