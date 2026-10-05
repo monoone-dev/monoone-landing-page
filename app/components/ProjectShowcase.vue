@@ -45,8 +45,9 @@ const stars = computed(() => stats.value?.repos[props.project.repo])
             v-if="project.stage"
             :label="t(`stage.${project.stage}`)"
             color="neutral"
-            variant="outline"
-            class="rounded-full"
+            variant="solid"
+            :class="['rounded-full', project.accent && 'stage-badge']"
+            :style="project.accent && { '--accent-from': project.accent[0], '--accent-to': project.accent[1] }"
           />
           <span class="mono-index text-sm">{{ counter }}</span>
         </div>
