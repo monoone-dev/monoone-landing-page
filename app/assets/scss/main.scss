@@ -1,16 +1,9 @@
 // Decorative layer for the Mono skin. Colors come from Nuxt UI tokens,
 // so everything follows light / dark mode automatically.
 
-$grid-size: 48px;
-$fade: radial-gradient(ellipse at top, #000 20%, transparent 70%);
+// Ciphertext shows around the hero copy and fades out toward the edges
+$cipher-mask: radial-gradient(ellipse 80% 75% at 50% 50%, transparent 38%, #000 70%, transparent 100%);
 $ease-out: cubic-bezier(0.22, 1, 0.36, 1);
-
-@mixin grid-lines($color) {
-  background-image:
-    linear-gradient(to right, $color 1px, transparent 1px),
-    linear-gradient(to bottom, $color 1px, transparent 1px);
-  background-size: $grid-size $grid-size;
-}
 
 @mixin motion {
   @media (prefers-reduced-motion: no-preference) {
@@ -52,20 +45,31 @@ $ease-out: cubic-bezier(0.22, 1, 0.36, 1);
 
 // ---- Background ------------------------------------------------------------
 
-.mono-grid {
+.hero {
   position: relative;
   isolation: isolate;
+  overflow: hidden;
+}
 
-  &::before {
-    content: '';
-    position: absolute;
-    inset: 0;
-    z-index: -1;
-    pointer-events: none;
-    @include grid-lines(var(--ui-border));
-    mask-image: $fade;
-    -webkit-mask-image: $fade;
-  }
+.hero-cipher {
+  position: absolute;
+  inset: 0;
+  z-index: -1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  pointer-events: none;
+  user-select: none;
+  white-space: pre;
+  font-family: var(--font-mono);
+  font-size: 12px;
+  line-height: 24px;
+  letter-spacing: 0.08em;
+  color: var(--ui-text-dimmed);
+  opacity: 0.32;
+  mask-image: $cipher-mask;
+  -webkit-mask-image: $cipher-mask;
 }
 
 .mono-index {
