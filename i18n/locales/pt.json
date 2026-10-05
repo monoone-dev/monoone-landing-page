@@ -95,6 +95,9 @@
       }
     }
   },
+  "stage": {
+    "alpha": "Alfa"
+  },
   "rigOne": {
     "status": "Grátis",
     "tagline": "Uma sala de controle nativa do macOS para agentes de código.",

@@ -95,6 +95,9 @@
       }
     }
   },
+  "stage": {
+    "alpha": "Alpha"
+  },
   "rigOne": {
     "status": "Kostenlos",
     "tagline": "Eine native macOS-Leitstelle für Coding-Agenten.",

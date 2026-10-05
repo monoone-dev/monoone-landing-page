@@ -95,6 +95,9 @@
       }
     }
   },
+  "stage": {
+    "alpha": "Alfa"
+  },
   "rigOne": {
     "status": "Za darmo",
     "tagline": "Natywna sterownia agentów kodujących dla macOS.",

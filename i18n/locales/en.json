@@ -95,6 +95,9 @@
       }
     }
   },
+  "stage": {
+    "alpha": "Alpha"
+  },
   "rigOne": {
     "status": "Free",
     "tagline": "A native macOS control room for coding agents.",

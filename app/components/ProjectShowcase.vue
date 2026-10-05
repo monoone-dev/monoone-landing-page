@@ -41,6 +41,13 @@ const stars = computed(() => stats.value?.repos[props.project.repo])
             variant="solid"
             class="rounded-full"
           />
+          <UBadge
+            v-if="project.stage"
+            :label="t(`stage.${project.stage}`)"
+            color="neutral"
+            variant="outline"
+            class="rounded-full"
+          />
           <span class="mono-index text-sm">{{ counter }}</span>
         </div>
 
