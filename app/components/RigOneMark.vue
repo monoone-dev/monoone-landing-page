@@ -1,13 +1,12 @@
 <script setup lang="ts">
-// RigOne symbol, the same drawing the application ships (docs/branding/rig-one-mark.svg in
-// monoone-dev/rig-one) scaled from the 1024 icon canvas onto the 24 grid.
+// RigOne symbol, from app/assets/brand/rig-one-icon.svg.
 // Inlined so gradient ids can be made unique, exactly like IndexOneMark next to it.
-// `tile: false` drops the dark app-icon tile and crops to the folded ribbon.
+// `tile: false` drops the white app-icon tile and crops to the folded ribbon.
 const props = withDefaults(defineProps<{ tile?: boolean }>(), { tile: true })
 
 const id = useId()
 const paint = (name: string) => `url(#${id}-${name})`
-const viewBox = computed(() => (props.tile ? '0 0 24 24' : '3.9 3.2 16.2 17.6'))
+const viewBox = computed(() => (props.tile ? '0 0 1024 1024' : '194 155 631 688'))
 </script>
 
 <template>
@@ -19,117 +18,146 @@ const viewBox = computed(() => (props.tile ? '0 0 24 24' : '3.9 3.2 16.2 17.6'))
   >
     <defs>
       <linearGradient
-        :id="`${id}-tile`"
-        x1="0"
-        y1="0"
-        x2="0.6"
-        y2="1"
+        :id="`${id}-upper`"
+        gradientUnits="userSpaceOnUse"
+        x1="437"
+        y1="350"
+        x2="945"
+        y2="542"
       >
-        <stop stop-color="#34343a" />
+        <stop stop-color="#5826ff" />
         <stop
-          offset=".52"
-          stop-color="#232328"
+          offset=".43"
+          stop-color="#9d48fb"
         />
         <stop
           offset="1"
-          stop-color="#131317"
+          stop-color="#e6cafa"
         />
       </linearGradient>
       <linearGradient
-        :id="`${id}-shaded`"
-        x1="0.1"
-        y1="0"
-        x2="0.9"
-        y2="1"
+        :id="`${id}-left`"
+        gradientUnits="userSpaceOnUse"
+        x1="457"
+        y1="372"
+        x2="309"
+        y2="724"
       >
-        <stop stop-color="#d3d8e2" />
+        <stop stop-color="#30209f" />
         <stop
-          offset=".46"
-          stop-color="#9aa2b0"
+          offset=".42"
+          stop-color="#5922ef"
         />
         <stop
           offset="1"
-          stop-color="#434b57"
+          stop-color="#aa60ff"
         />
       </linearGradient>
       <linearGradient
-        :id="`${id}-lit`"
-        x1="0.05"
-        y1="0"
-        x2="0.95"
-        y2="1"
+        :id="`${id}-stem`"
+        gradientUnits="userSpaceOnUse"
+        x1="365"
+        y1="579"
+        x2="492"
+        y2="916"
       >
-        <stop stop-color="#f6f7fa" />
+        <stop stop-color="#963eff" />
         <stop
-          offset=".6"
-          stop-color="#dfe3ea"
+          offset=".4"
+          stop-color="#6124ef"
         />
         <stop
           offset="1"
-          stop-color="#c4cad5"
+          stop-color="#2d109f"
         />
       </linearGradient>
       <linearGradient
-        :id="`${id}-foot`"
-        x1="0.1"
-        y1="0"
-        x2="0.9"
-        y2="1"
+        :id="`${id}-play`"
+        gradientUnits="userSpaceOnUse"
+        x1="560"
+        y1="482"
+        x2="646"
+        y2="773"
       >
-        <stop stop-color="#cfd4dd" />
+        <stop stop-color="#d5a0fb" />
         <stop
-          offset=".55"
-          stop-color="#a8aeba"
+          offset=".44"
+          stop-color="#be8af6"
         />
         <stop
           offset="1"
-          stop-color="#7f8694"
+          stop-color="#6029fa"
+        />
+      </linearGradient>
+      <linearGradient
+        :id="`${id}-lower`"
+        gradientUnits="userSpaceOnUse"
+        x1="616"
+        y1="722"
+        x2="937"
+        y2="898"
+      >
+        <stop stop-color="#5c29ff" />
+        <stop
+          offset=".5"
+          stop-color="#b888f8"
+        />
+        <stop
+          offset="1"
+          stop-color="#ebd6fb"
+        />
+      </linearGradient>
+      <linearGradient
+        :id="`${id}-crease`"
+        gradientUnits="userSpaceOnUse"
+        x1="373"
+        y1="658"
+        x2="512"
+        y2="491"
+      >
+        <stop
+          stop-color="#d9b5ff"
+          stop-opacity=".15"
+        />
+        <stop
+          offset="1"
+          stop-color="#efe0ff"
+          stop-opacity=".9"
         />
       </linearGradient>
     </defs>
 
-    <rect
+    <path
       v-if="tile"
-      width="24"
-      height="24"
-      rx="5.44"
-      ry="5.44"
-      :fill="paint('tile')"
+      fill="#fff"
+      d="M280 0H744C908 0 1024 116 1024 280V744C1024 908 908 1024 744 1024H280C116 1024 0 908 0 744V280C0 116 116 0 280 0Z"
     />
 
-    <g
-      stroke-width="0.94"
-      stroke-linejoin="round"
-    >
+    <g transform="translate(-106 -86) scale(.98)">
       <path
-        d="M4.90 8.67 L6.82 7.08 L10.29 16.13 L5.18 18.59 Z"
-        :fill="paint('shaded')"
-        :stroke="paint('shaded')"
+        :fill="paint('upper')"
+        d="M355 396 588 271C613 257 641 257 667 271L899 390C925 404 939 428 939 459V532C939 580 891 609 849 586L481 379C445 359 413 363 382 381Z"
       />
       <path
-        d="M6.82 7.08 L13.71 4.15 L18.63 8.18 L14.23 11.67 Z"
-        :fill="paint('lit')"
-        :stroke="paint('lit')"
+        :fill="paint('left')"
+        d="M382 381C415 362 446 360 481 379L514 397V887C514 924 488 937 454 916L356 860C331 845 317 824 317 796V459C317 426 332 406 355 396Z"
       />
       <path
-        d="M14.23 11.67 L18.77 15.21 L17.58 19.95 L12.98 17.25 Z"
-        :fill="paint('foot')"
-        :stroke="paint('foot')"
+        :fill="paint('stem')"
+        d="M514 488V887C514 924 488 937 454 916L356 860C331 845 317 824 317 796V751C317 725 325 705 343 684Z"
+      />
+      <path
+        :fill="paint('play')"
+        d="M515 508C515 484 538 473 561 487L737 589C767 606 768 641 738 659L540 773C527 780 519 786 515 797Z"
+      />
+      <path
+        :fill="paint('lower')"
+        d="M608 741 726 670C741 661 751 661 767 671L905 753C928 767 939 785 939 810V886C939 932 896 966 853 942L608 801C582 786 582 758 608 741Z"
+      />
+      <path
+        :fill="paint('crease')"
+        d="M343 684 513 486V490L345 686Z"
       />
     </g>
-
-    <rect
-      v-if="tile"
-      x="0.4"
-      y="0.4"
-      width="23.2"
-      height="23.2"
-      rx="5.1"
-      ry="5.1"
-      fill="none"
-      stroke="#ffffff"
-      stroke-opacity=".1"
-      stroke-width="0.8"
-    />
   </svg>
 </template>
