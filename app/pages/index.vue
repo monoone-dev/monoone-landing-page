@@ -11,7 +11,7 @@ const { t } = useI18n()
       :ui="{ title: 'text-4xl sm:text-7xl text-balance wrap-break-word', description: 'text-balance' }"
     >
       <template #top>
-        <HeroCipher />
+        <HeroBackdrop />
       </template>
 
       <template #headline>
