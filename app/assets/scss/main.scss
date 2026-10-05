@@ -1,16 +1,10 @@
 // Decorative layer for the Mono skin. Colors come from Nuxt UI tokens,
 // so everything follows light / dark mode automatically.
 
-$grid-size: 48px;
-$fade: radial-gradient(ellipse at top, #000 20%, transparent 70%);
+// Hero canvas: dots fade out from the top, the waveform fades out to the sides
+$dots-mask: radial-gradient(ellipse at top, #000 20%, transparent 70%);
+$wave-mask: linear-gradient(to right, transparent, #000 25%, #000 75%, transparent);
 $ease-out: cubic-bezier(0.22, 1, 0.36, 1);
-
-@mixin grid-lines($color) {
-  background-image:
-    linear-gradient(to right, $color 1px, transparent 1px),
-    linear-gradient(to bottom, $color 1px, transparent 1px);
-  background-size: $grid-size $grid-size;
-}
 
 @mixin motion {
   @media (prefers-reduced-motion: no-preference) {
@@ -52,19 +46,50 @@ $ease-out: cubic-bezier(0.22, 1, 0.36, 1);
 
 // ---- Background ------------------------------------------------------------
 
-.mono-grid {
+.hero {
   position: relative;
   isolation: isolate;
+  overflow: hidden;
+}
 
-  &::before {
-    content: '';
-    position: absolute;
-    inset: 0;
-    z-index: -1;
-    pointer-events: none;
-    @include grid-lines(var(--ui-border));
-    mask-image: $fade;
-    -webkit-mask-image: $fade;
+.hero-backdrop {
+  position: absolute;
+  inset: 0;
+  z-index: -1;
+  pointer-events: none;
+}
+
+// RigOne: the dotted canvas agents are placed on
+.hero-backdrop__dots {
+  position: absolute;
+  inset: 0;
+  background-image: radial-gradient(circle, var(--ui-border-accented) 1px, transparent 1.5px);
+  background-size: 24px 24px;
+  background-position: center top;
+  mask-image: $dots-mask;
+  -webkit-mask-image: $dots-mask;
+}
+
+// IndexOne: a quiet waveform along the bottom of the hero
+.hero-backdrop__wave {
+  position: absolute;
+  inset-inline: 0;
+  bottom: 0;
+  height: 72px;
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
+  gap: 4px;
+  mask-image: $wave-mask;
+  -webkit-mask-image: $wave-mask;
+
+  span {
+    width: 2px;
+    height: 100%;
+    border-radius: 1px;
+    background: var(--ui-border-accented);
+    transform: scaleY(var(--bar));
+    transform-origin: bottom;
   }
 }
 
@@ -104,6 +129,12 @@ $ease-out: cubic-bezier(0.22, 1, 0.36, 1);
   }
 }
 
+@keyframes wave {
+  50% {
+    transform: scaleY(calc(var(--bar) * 0.55));
+  }
+}
+
 @keyframes nudge {
   50% {
     transform: translateY(3px);
@@ -113,6 +144,11 @@ $ease-out: cubic-bezier(0.22, 1, 0.36, 1);
 @include motion {
   html {
     scroll-behavior: smooth;
+  }
+
+  // Hero waveform breathes, each bar a little out of step with its neighbours
+  .hero-backdrop__wave span {
+    animation: wave 2.4s ease-in-out var(--bar-delay) infinite;
   }
 
   // Hero: staggered entrance
