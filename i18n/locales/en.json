@@ -96,7 +96,7 @@
     }
   },
   "rigOne": {
-    "status": "Free and open source",
+    "status": "Free",
     "tagline": "A native macOS control room for coding agents.",
     "description": "RigOne turns a row of coding agents into one graph you can see. Define an agent once, place it on a canvas, connect the steps, and run the graph against a folder on your Mac. Claude Code and Codex are first-class peers, independent branches really do run at the same time, and the evidence of a run outlives the terminal it came from.",
     "meta": {

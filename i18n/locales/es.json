@@ -96,7 +96,7 @@
     }
   },
   "rigOne": {
-    "status": "Libre y de código abierto",
+    "status": "Gratis",
     "tagline": "Una sala de control nativa de macOS para agentes de código.",
     "description": "RigOne convierte una fila de agentes de código en un grafo que se ve. Define un agente una vez, colócalo en el lienzo, conecta los pasos y ejecuta el grafo sobre una carpeta de tu Mac. Claude Code y Codex están en pie de igualdad, las ramas independientes corren de verdad a la vez y las pruebas de una ejecución sobreviven al terminal.",
     "meta": {
