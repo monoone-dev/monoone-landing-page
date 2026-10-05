@@ -14,7 +14,9 @@ Rules for every person and every coding agent working here:
   `.github/pull_request_template.md`. Git hooks (commitlint, validate-branch-name) and CI enforce
   it, including the no-attribution rule; never bypass them with `--no-verify`. Details: the
   `pr-description` skill.
-- **Pull requests only.** Never push to `main`.
+- **Pull requests by default.** Contributors open a pull request and never push to `main`.
+  Maintainers may push to `main` directly when that is the sensible thing. Every push to `main`
+  deploys the site.
 - **Green before push.** `pnpm typecheck` and `pnpm build` pass locally (the `ci-maintenance` skill).
 - **No personal names** on the site, and **nothing private** in the repo: link public repositories
   and sites only (the `site-content` skill).
