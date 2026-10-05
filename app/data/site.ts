@@ -9,6 +9,10 @@ export interface Project {
   mark: string
   /** Public repo whose stars are shown on the card */
   repo: string
+  /** Release stage shown next to the status badge, e.g. `alpha` → `stage.alpha` */
+  stage?: 'alpha'
+  /** Two colors from the app's logo, used for the stage badge */
+  accent?: [string, string]
   meta: string[]
   features: { key: string, icon: string }[]
   links: { key: string, to: string, icon: string }[]
@@ -70,6 +74,8 @@ export const projects: Project[] = [
     key: 'rigOne',
     name: 'RigOne',
     mark: 'RigOneMark',
+    stage: 'alpha',
+    accent: ['#5826ff', '#9d48fb'],
     // The application repository is private, so the public numbers and the build both live
     // on the landing repository — the same arrangement IndexOne uses.
     repo: 'rig-one-landing-page',

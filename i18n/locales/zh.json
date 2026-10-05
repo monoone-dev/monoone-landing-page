@@ -95,6 +95,9 @@
       }
     }
   },
+  "stage": {
+    "alpha": "Alpha 版"
+  },
   "rigOne": {
     "status": "免费",
     "tagline": "面向编程智能体的原生 macOS 控制室。",

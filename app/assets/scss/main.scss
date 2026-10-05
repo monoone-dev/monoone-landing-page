@@ -93,6 +93,13 @@ $ease-out: cubic-bezier(0.22, 1, 0.36, 1);
   }
 }
 
+// Release stage (Alpha) in the app's own colors, so it stands out from the grayscale badges
+.stage-badge {
+  color: #fff;
+  background-image: linear-gradient(135deg, var(--accent-from), var(--accent-to));
+  box-shadow: 0 4px 14px -4px var(--accent-from);
+}
+
 .mono-index {
   font-family: var(--font-mono);
   font-variant-numeric: tabular-nums;
