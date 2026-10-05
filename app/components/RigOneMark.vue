@@ -1,22 +1,40 @@
 <script setup lang="ts">
 // RigOne symbol, from app/assets/brand/rig-one-icon.svg.
 // Inlined so gradient ids can be made unique, exactly like IndexOneMark next to it.
+// Drawn on IndexOne's 1254 canvas with the same tile and shadow, so both cards match in size.
 // `tile: false` drops the white app-icon tile and crops to the folded ribbon.
 const props = withDefaults(defineProps<{ tile?: boolean }>(), { tile: true })
 
 const id = useId()
 const paint = (name: string) => `url(#${id}-${name})`
-const viewBox = computed(() => (props.tile ? '0 0 1024 1024' : '194 155 631 688'))
+const viewBox = computed(() => (props.tile ? '0 0 1254 1254' : '306 250 635 692'))
 </script>
 
 <template>
   <svg
     :viewBox="viewBox"
-    class="block size-full"
+    class="block size-full overflow-visible"
     role="img"
     aria-label="RigOne"
   >
     <defs>
+      <linearGradient
+        :id="`${id}-tile`"
+        x1="0"
+        y1="0"
+        x2="1"
+        y2="1"
+      >
+        <stop stop-color="#ffffff" />
+        <stop
+          offset=".55"
+          stop-color="#faf8ff"
+        />
+        <stop
+          offset="1"
+          stop-color="#f3f0fb"
+        />
+      </linearGradient>
       <linearGradient
         :id="`${id}-upper`"
         gradientUnits="userSpaceOnUse"
@@ -125,15 +143,46 @@ const viewBox = computed(() => (props.tile ? '0 0 1024 1024' : '194 155 631 688'
           stop-opacity=".9"
         />
       </linearGradient>
+      <filter
+        :id="`${id}-tile-shadow`"
+        x="-25%"
+        y="-20%"
+        width="150%"
+        height="155%"
+        color-interpolation-filters="sRGB"
+      >
+        <feGaussianBlur
+          in="SourceAlpha"
+          stdDeviation="30"
+        />
+        <feOffset dy="28" />
+        <feComponentTransfer result="shadow-alpha">
+          <feFuncA
+            type="linear"
+            slope=".24"
+          />
+        </feComponentTransfer>
+        <feFlood flood-color="#5a3fb8" />
+        <feComposite
+          operator="in"
+          in2="shadow-alpha"
+        />
+        <feMerge>
+          <feMergeNode />
+          <feMergeNode in="SourceGraphic" />
+        </feMerge>
+      </filter>
     </defs>
 
     <path
       v-if="tile"
-      fill="#fff"
-      d="M280 0H744C908 0 1024 116 1024 280V744C1024 908 908 1024 744 1024H280C116 1024 0 908 0 744V280C0 116 116 0 280 0Z"
+      d="M378 92H873C1045 92 1143 197 1143 362V860C1143 1035 1048 1131 874 1131H379C200 1131 109 1037 109 861V364C109 198 204 92 378 92Z"
+      :fill="paint('tile')"
+      :filter="paint('tile-shadow')"
     />
 
-    <g transform="translate(-106 -86) scale(.98)">
+    <!-- the 1024 source icon placed on IndexOne's tile (109,92 → 1143,1131) -->
+    <g transform="translate(109 92) scale(1.0098) translate(-106 -86) scale(.98)">
       <path
         :fill="paint('upper')"
         d="M355 396 588 271C613 257 641 257 667 271L899 390C925 404 939 428 939 459V532C939 580 891 609 849 586L481 379C445 359 413 363 382 381Z"
