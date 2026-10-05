@@ -1,3 +1,32 @@
+const locales = [
+  { code: 'en', language: 'en', name: 'English', file: 'en.json' },
+  { code: 'pl', language: 'pl-PL', name: 'Polski', file: 'pl.json' },
+  { code: 'es', language: 'es-ES', name: 'Español', file: 'es.json' },
+  { code: 'it', language: 'it-IT', name: 'Italiano', file: 'it.json' },
+  { code: 'fr', language: 'fr-FR', name: 'Français', file: 'fr.json' },
+  { code: 'pt', language: 'pt-BR', name: 'Português', file: 'pt.json' },
+  { code: 'de', language: 'de-DE', name: 'Deutsch', file: 'de.json' },
+  { code: 'zh', language: 'zh-CN', name: '简体中文', file: 'zh.json' },
+  { code: 'ja', language: 'ja-JP', name: '日本語', file: 'ja.json' }
+]
+
+// The static build serves English HTML at /. If i18n switched that page to the visitor's language
+// after it loaded, hydration would keep English attributes (the flag in the header stayed British
+// on a Polish page). So load the prerendered /pl, /de, ... page instead, before Nuxt starts.
+// Same rules as detectBrowserLanguage below: a saved choice first, then the browser languages.
+// GitHub Pages builds set NUXT_APP_BASE_URL (e.g. /monoone-landing-page/), so the root is that path.
+const base = (process.env.NUXT_APP_BASE_URL || '/').replace(/\/*$/, '/')
+const languageRedirect = `(function(){try{
+var base=${JSON.stringify(base)},path=location.pathname;
+if(path!==base&&path+'/'!==base)return;
+var codes=${JSON.stringify(locales.map(l => l.code))};
+var saved=document.cookie.match(/(?:^|; )i18n_locale=([^;]*)/);
+var code=saved?saved[1]:null;
+if(!code){var langs=navigator.languages||[navigator.language];
+for(var i=0;i<langs.length&&!code;i++){var c=String(langs[i]).toLowerCase().split('-')[0];if(codes.indexOf(c)>-1)code=c}}
+if(code&&code!=='en'&&codes.indexOf(code)>-1)location.replace(base+code+location.search+location.hash);
+}catch(e){}})()`
+
 export default defineNuxtConfig({
   modules: ['@nuxt/ui', '@nuxtjs/i18n'],
 
@@ -8,6 +37,12 @@ export default defineNuxtConfig({
   runtimeConfig: {
     githubOrg: 'monoone-dev',
     githubToken: ''
+  },
+
+  app: {
+    head: {
+      script: [{ innerHTML: languageRedirect, tagPosition: 'head' }]
+    }
   },
 
   colorMode: {
@@ -22,17 +57,7 @@ export default defineNuxtConfig({
     baseUrl: 'https://monoone.dev',
     defaultLocale: 'en',
     strategy: 'prefix_except_default',
-    locales: [
-      { code: 'en', language: 'en', name: 'English', file: 'en.json' },
-      { code: 'pl', language: 'pl-PL', name: 'Polski', file: 'pl.json' },
-      { code: 'es', language: 'es-ES', name: 'Español', file: 'es.json' },
-      { code: 'it', language: 'it-IT', name: 'Italiano', file: 'it.json' },
-      { code: 'fr', language: 'fr-FR', name: 'Français', file: 'fr.json' },
-      { code: 'pt', language: 'pt-BR', name: 'Português', file: 'pt.json' },
-      { code: 'de', language: 'de-DE', name: 'Deutsch', file: 'de.json' },
-      { code: 'zh', language: 'zh-CN', name: '简体中文', file: 'zh.json' },
-      { code: 'ja', language: 'ja-JP', name: '日本語', file: 'ja.json' }
-    ],
+    locales,
     vueI18n: './i18n.config.ts',
     // Any browser language we don't support (and any missing key) falls back to English
     detectBrowserLanguage: {
