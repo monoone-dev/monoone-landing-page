@@ -96,7 +96,7 @@
     }
   },
   "rigOne": {
-    "status": "Frei und quelloffen",
+    "status": "Kostenlos",
     "tagline": "Eine native macOS-Leitstelle für Coding-Agenten.",
     "description": "RigOne macht aus einer Reihe von Coding-Agenten einen Graphen, den man sieht. Beschreibe einen Agenten einmal, setz ihn auf die Leinwand, verbinde die Schritte und lass den Graphen auf einem Ordner auf deinem Mac laufen. Claude Code und Codex sind gleichberechtigt, unabhängige Zweige laufen wirklich gleichzeitig, und die Belege eines Laufs überleben das Terminal.",
     "meta": {

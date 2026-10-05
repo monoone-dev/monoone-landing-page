@@ -96,7 +96,7 @@
     }
   },
   "rigOne": {
-    "status": "Darmowe i otwarte",
+    "status": "Za darmo",
     "tagline": "Natywna sterownia agentów kodujących dla macOS.",
     "description": "RigOne zamienia rząd agentów kodujących w jeden graf, który widać. Opisz agenta raz, postaw go na kanwie, połącz kroki i uruchom graf na folderze na swoim Macu. Claude Code i Codex są równorzędni, niezależne gałęzie naprawdę idą w tym samym czasie, a ślad po biegu żyje dłużej niż terminal, z którego powstał.",
     "meta": {
