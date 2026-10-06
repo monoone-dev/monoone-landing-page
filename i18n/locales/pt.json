@@ -1,6 +1,6 @@
 {
   "meta": {
-    "title": "Software pequeno para Mac, privado por padrão",
+    "title": "Software pequeno, privado por padrão",
     "description": "Criamos ferramentas que mantêm seus dados no seu dispositivo e deixam com você arquivos que são seus."
   },
   "nav": {
@@ -45,8 +45,8 @@
         "description": "Os recursos na nuvem são opcionais e os dados sensíveis são removidos antes do envio. O compartilhamento é criptografado de ponta a ponta."
       },
       "mac": {
-        "title": "Feito para o Mac",
-        "description": "Nativo, assinado e notarizado. Apple Silicon e Intel, macOS 13.4 ou posterior."
+        "title": "Mac e web",
+        "description": "Apps nativos para Mac, assinados e notarizados. Surface One é CSS puro e componentes Angular para qualquer app web."
       }
     }
   },
