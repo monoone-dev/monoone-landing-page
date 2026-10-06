@@ -93,6 +93,72 @@ $ease-out: cubic-bezier(0.22, 1, 0.36, 1);
   }
 }
 
+// Hero drawing: every product on one plane (see HeroFamily.vue, a 400 × 264 board)
+.hero-family {
+  position: relative;
+  width: min(100%, 400px);
+  aspect-ratio: 400 / 264;
+  margin-inline: auto;
+}
+
+.hero-family__board {
+  position: absolute;
+  inset: 0;
+  overflow: visible;
+  color: var(--ui-text-highlighted);
+}
+
+.hero-family__plane {
+  fill: var(--ui-bg);
+  stroke: var(--ui-border-accented);
+  stroke-width: 1;
+  stroke-linejoin: round;
+
+  &--under {
+    fill: var(--ui-bg-elevated);
+    stroke: var(--ui-border);
+  }
+}
+
+.hero-family__dot {
+  fill: var(--ui-border-accented);
+}
+
+.hero-family__wire {
+  fill: none;
+  stroke: var(--ui-text-dimmed);
+  stroke-width: 1.2;
+  stroke-dasharray: 3 5;
+  stroke-linecap: round;
+}
+
+.hero-family__hub {
+  fill: var(--ui-text-highlighted);
+}
+
+// MonoOne mark above the middle of the plane: center (200, 90), 104 wide
+.hero-family__mono {
+  position: absolute;
+  left: 50%;
+  top: calc(90 / 264 * 100%);
+  width: 26%;
+  aspect-ratio: 1;
+  translate: -50% -50%;
+}
+
+// Product icons on the plane's corners: 72 wide, centered on the corner
+.hero-family__node {
+  position: absolute;
+  width: 18%;
+  aspect-ratio: 1;
+  translate: -50% -50%;
+}
+
+.hero-family__tile {
+  width: 100%;
+  height: 100%;
+}
+
 // Release stage (Alpha) in the app's own colors, so it stands out from the grayscale badges
 .stage-badge {
   color: #fff;
@@ -142,6 +208,19 @@ $ease-out: cubic-bezier(0.22, 1, 0.36, 1);
   }
 }
 
+@keyframes wire {
+  to {
+    stroke-dashoffset: -16;
+  }
+}
+
+@keyframes breathe {
+  50% {
+    transform: scale(0.85);
+    opacity: 0.7;
+  }
+}
+
 @keyframes nudge {
   50% {
     transform: translateY(3px);
@@ -177,6 +256,21 @@ $ease-out: cubic-bezier(0.22, 1, 0.36, 1);
     > svg {
       animation: float 6s ease-in-out 1.3s infinite;
     }
+  }
+
+  // Hero drawing: wires flow out from the MonoOne mark, product icons bob out of step
+  .hero-family__wire {
+    animation: wire 1.6s linear infinite;
+  }
+
+  .hero-family__tile > svg {
+    animation: float 5s ease-in-out calc(var(--enter-delay) + 0.8s) infinite;
+  }
+
+  .hero-family__shadow {
+    transform-box: fill-box;
+    transform-origin: center;
+    animation: breathe 6s ease-in-out 1.3s infinite;
   }
 
   // Header logo: the halves part slightly on hover
