@@ -1,4 +1,11 @@
-# monoone-landing-page
+<p align="center">
+  <picture>
+    <source media="(prefers-color-scheme: dark)" srcset=".github/assets/monoone-mark-dark.svg">
+    <img src=".github/assets/monoone-mark-light.svg" alt="MonoOne" width="96" height="96">
+  </picture>
+</p>
+
+<h1 align="center">monoone-landing-page</h1>
 
 The MonoOne organization website: a single page about who we are and what we build.
 
