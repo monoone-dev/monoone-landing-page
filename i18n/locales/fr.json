@@ -96,7 +96,8 @@
     }
   },
   "stage": {
-    "alpha": "Alpha"
+    "alpha": "Alpha",
+    "beta": "Bêta"
   },
   "rigOne": {
     "status": "Gratuit",
@@ -135,6 +136,46 @@
       "evidence": {
         "title": "Des traces durables",
         "description": "Reçus, passations et diagnostics restent quand la sortie a disparu."
+      }
+    }
+  },
+  "surfaceOne": {
+    "status": "Gratuit",
+    "tagline": "Un design system et une bibliothèque de composants pour n’importe quelle app.",
+    "description": "Surface One est un design system et une bibliothèque de composants packagés pour que n’importe quelle app puisse s’en servir. Les tokens et les skins sont du CSS pur, les composants Angular s’appuient dessus, et des paquets Vue et React sont prévus sur les mêmes tokens.",
+    "meta": {
+      "angular": "Angular 22",
+      "themes": "Clair et sombre",
+      "languages": "Docs en 9 langues"
+    },
+    "links": {
+      "docs": "Documentation",
+      "github": "GitHub"
+    },
+    "features": {
+      "tokens": {
+        "title": "Design tokens",
+        "description": "CSS indépendant du framework : couleurs, typographie, espacements et polices auto-hébergées."
+      },
+      "skins": {
+        "title": "Trois skins, cinq accents",
+        "description": "Studio, Paper et Minimalist, chacun en clair et en sombre."
+      },
+      "components": {
+        "title": "Composants Angular",
+        "description": "Des parties à base de directives, un point d’entrée par composant."
+      },
+      "docs": {
+        "title": "Docs et Storybook",
+        "description": "Docs pré-rendues et chaque composant dans Storybook, vérifiés avec axe-core."
+      },
+      "mcp": {
+        "title": "Serveur MCP",
+        "description": "Donne à votre assistant IA les composants, leur API, les templates et les variables du thème."
+      },
+      "skills": {
+        "title": "Skills pour agents",
+        "description": "Une commande installe les skills Surface One pour Claude, Codex et Copilot."
       }
     }
   },

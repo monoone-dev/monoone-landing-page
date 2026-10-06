@@ -4,12 +4,13 @@ import type { Project } from '~/data/site'
 import { site } from '~/data/site'
 import IndexOneMark from './IndexOneMark.vue'
 import RigOneMark from './RigOneMark.vue'
+import SurfaceOneMark from './SurfaceOneMark.vue'
 
 /* The symbol is picked by name from `site.ts`, but the components are imported HERE rather
    than resolved from a string: Nuxt auto-imports what it can see statically, so
    `<component :is="'RigOneMark'" />` compiles to nothing and the card loses its mark with no
    error anywhere. Measured on this page before the second project shipped. */
-const marks: Record<string, Component> = { IndexOneMark, RigOneMark }
+const marks: Record<string, Component> = { IndexOneMark, RigOneMark, SurfaceOneMark }
 
 const props = withDefaults(defineProps<{ project: Project, index?: number }>(), { index: 0 })
 

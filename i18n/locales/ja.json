@@ -96,7 +96,8 @@
     }
   },
   "stage": {
-    "alpha": "アルファ版"
+    "alpha": "アルファ版",
+    "beta": "ベータ版"
   },
   "rigOne": {
     "status": "無料",
@@ -135,6 +136,46 @@
       "evidence": {
         "title": "残り続ける証拠",
         "description": "記録、引き継ぎ、診断は出力が消えた後も残ります。"
+      }
+    }
+  },
+  "surfaceOne": {
+    "status": "無料",
+    "tagline": "どのアプリでも使えるデザインシステムとコンポーネントライブラリ。",
+    "description": "Surface One は、どのアプリでも使えるようにパッケージ化したデザインシステムとコンポーネントライブラリです。デザイントークンとスキンは素の CSS、その上に Angular コンポーネント。同じトークンを使う Vue と React のパッケージも予定しています。",
+    "meta": {
+      "angular": "Angular 22",
+      "themes": "ライトとダーク",
+      "languages": "9 言語のドキュメント"
+    },
+    "links": {
+      "docs": "ドキュメント",
+      "github": "GitHub"
+    },
+    "features": {
+      "tokens": {
+        "title": "デザイントークン",
+        "description": "フレームワークに依存しない CSS：色、文字、余白、セルフホストのフォント。"
+      },
+      "skins": {
+        "title": "3 つのスキン、5 つのアクセント",
+        "description": "Studio、Paper、Minimalist。それぞれライトとダーク。"
+      },
+      "components": {
+        "title": "Angular コンポーネント",
+        "description": "ディレクティブ中心のパーツ。コンポーネントごとにエントリポイント。"
+      },
+      "docs": {
+        "title": "ドキュメントと Storybook",
+        "description": "プリレンダリングされたドキュメントと全コンポーネントの Storybook。axe-core で検証済み。"
+      },
+      "mcp": {
+        "title": "MCP サーバー",
+        "description": "AI アシスタントにコンポーネント、API、テンプレート、テーマ変数を渡します。"
+      },
+      "skills": {
+        "title": "エージェントスキル",
+        "description": "1 つのコマンドで Claude、Codex、Copilot 向けの Surface One スキルを導入。"
       }
     }
   },
