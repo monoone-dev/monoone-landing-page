@@ -13,6 +13,8 @@ export interface Project {
   stage?: 'alpha' | 'beta'
   /** Two colors from the app's logo, used for the stage badge */
   accent?: [string, string]
+  /** schema.org `applicationCategory` for search engines (structured data in the page head) */
+  category: 'BusinessApplication' | 'DeveloperApplication'
   meta: string[]
   features: { key: string, icon: string }[]
   links: { key: string, to: string, icon: string }[]
@@ -52,6 +54,7 @@ export const projects: Project[] = [
     name: 'IndexOne',
     mark: 'IndexOneMark',
     repo: 'index-one-landing-page',
+    category: 'BusinessApplication',
     meta: ['macos', 'arch', 'noAccount'],
     features: [
       { key: 'bothSides', icon: 'i-lucide-audio-lines' },
@@ -79,6 +82,7 @@ export const projects: Project[] = [
     // The application repository is private, so the public numbers and the build both live
     // on the landing repository — the same arrangement IndexOne uses.
     repo: 'rig-one-landing-page',
+    category: 'DeveloperApplication',
     meta: ['macos', 'silicon', 'ownCli'],
     features: [
       { key: 'canvas', icon: 'i-lucide-workflow' },
@@ -108,6 +112,7 @@ export const projects: Project[] = [
     stage: 'beta',
     accent: ['#f43fb4', '#1d2df5'],
     repo: 'surface-one',
+    category: 'DeveloperApplication',
     meta: ['angular', 'themes', 'languages'],
     features: [
       { key: 'tokens', icon: 'i-lucide-palette' },

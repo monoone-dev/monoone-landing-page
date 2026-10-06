@@ -1,6 +1,6 @@
 <script setup lang="ts">
 import * as uiLocales from '@nuxt/ui/locale'
-import { site } from '~/data/site'
+import { projects, site } from '~/data/site'
 
 const { t, locale } = useI18n()
 const { app, public: { i18n } } = useRuntimeConfig()
@@ -25,14 +25,64 @@ useHead(() => ({
   ]
 }))
 
+const title = computed(() => `${site.name} — ${t('meta.title')}`)
+
 useSeoMeta({
-  title: () => `${site.name} — ${t('meta.title')}`,
+  title,
   description: () => t('meta.description'),
-  ogTitle: site.name,
-  ogDescription: () => t('meta.title'),
+  ogType: 'website',
+  ogSiteName: site.name,
+  ogTitle: title,
+  ogDescription: () => t('meta.description'),
   ogImage: absolute('og-image.png'),
+  ogImageWidth: 1024,
+  ogImageHeight: 1024,
+  ogImageAlt: site.name,
   twitterCard: 'summary_large_image'
 })
+
+// Structured data (schema.org JSON-LD): who we are and what we make, in the page's language.
+// Every product is free, so each one carries a zero-price offer, which search engines expect.
+const home = absolute('')
+const structuredData = computed(() => ({
+  '@context': 'https://schema.org',
+  '@graph': [
+    {
+      '@type': 'Organization',
+      '@id': `${home}#organization`,
+      'name': site.name,
+      'url': home,
+      'logo': absolute('og-image.png'),
+      'sameAs': [site.github]
+    },
+    {
+      '@type': 'WebSite',
+      '@id': `${home}#website`,
+      'name': site.name,
+      'url': home,
+      'description': t('meta.description'),
+      'inLanguage': i18nHead.value.htmlAttrs.lang,
+      'publisher': { '@id': `${home}#organization` }
+    },
+    ...projects.map(project => ({
+      '@type': 'SoftwareApplication',
+      'name': project.name,
+      'description': t(`${project.key}.tagline`),
+      'applicationCategory': project.category,
+      ...(project.meta.includes('macos') && { operatingSystem: t(`${project.key}.meta.macos`) }),
+      'url': project.links.find(link => link.key === 'site' || link.key === 'docs')?.to,
+      ...(project.links.some(link => link.key === 'download') && {
+        downloadUrl: project.links.find(link => link.key === 'download')?.to
+      }),
+      'offers': { '@type': 'Offer', 'price': '0', 'priceCurrency': 'USD' },
+      'publisher': { '@id': `${home}#organization` }
+    }))
+  ]
+}))
+
+useHead(() => ({
+  script: [{ type: 'application/ld+json', innerHTML: JSON.stringify(structuredData.value) }]
+}))
 
 // Nuxt UI's own strings (aria labels etc.); Chinese is Simplified
 const uiLocale = computed(() => {
