@@ -96,7 +96,8 @@
     }
   },
   "stage": {
-    "alpha": "Alpha"
+    "alpha": "Alpha",
+    "beta": "Beta"
   },
   "rigOne": {
     "status": "Kostenlos",
@@ -135,6 +136,46 @@
       "evidence": {
         "title": "Belege, die bleiben",
         "description": "Belege, Übergaben und Diagnosen bleiben, wenn die Ausgabe weg ist."
+      }
+    }
+  },
+  "surfaceOne": {
+    "status": "Kostenlos",
+    "tagline": "Ein Designsystem und eine Komponentenbibliothek für jede App.",
+    "description": "Surface One ist ein Designsystem und eine Komponentenbibliothek, so verpackt, dass jede App sie nutzen kann. Tokens und Skins sind reines CSS, Angular-Komponenten bauen darauf auf, und Pakete für Vue und React sind auf denselben Tokens geplant.",
+    "meta": {
+      "angular": "Angular 22",
+      "themes": "Hell und dunkel",
+      "languages": "Doku in 9 Sprachen"
+    },
+    "links": {
+      "docs": "Dokumentation",
+      "github": "GitHub"
+    },
+    "features": {
+      "tokens": {
+        "title": "Design-Tokens",
+        "description": "Framework-unabhängiges CSS: Farben, Typografie, Abstände und eigene Schriften."
+      },
+      "skins": {
+        "title": "Drei Skins, fünf Akzente",
+        "description": "Studio, Paper und Minimalist, jeweils hell und dunkel."
+      },
+      "components": {
+        "title": "Angular-Komponenten",
+        "description": "Direktiven-basierte Teile, ein Einstiegspunkt pro Komponente."
+      },
+      "docs": {
+        "title": "Doku und Storybook",
+        "description": "Vorgerenderte Doku und jede Komponente in Storybook, geprüft mit axe-core."
+      },
+      "mcp": {
+        "title": "MCP-Server",
+        "description": "Gibt deinem KI-Assistenten die Komponenten, ihre API, Vorlagen und Theme-Variablen."
+      },
+      "skills": {
+        "title": "Agent-Skills",
+        "description": "Ein Befehl installiert die Surface-One-Skills für Claude, Codex und Copilot."
       }
     }
   },

@@ -96,7 +96,8 @@
     }
   },
   "stage": {
-    "alpha": "Alfa"
+    "alpha": "Alfa",
+    "beta": "Beta"
   },
   "rigOne": {
     "status": "Gratis",
@@ -135,6 +136,46 @@
       "evidence": {
         "title": "Pruebas que duran",
         "description": "Recibos, traspasos y diagnósticos quedan cuando la salida ya no está."
+      }
+    }
+  },
+  "surfaceOne": {
+    "status": "Gratis",
+    "tagline": "Un sistema de diseño y una biblioteca de componentes para cualquier app.",
+    "description": "Surface One es un sistema de diseño y una biblioteca de componentes empaquetados para que cualquier app pueda usarlos. Los tokens y los temas son CSS puro, encima van los componentes de Angular, y hay paquetes para Vue y React previstos sobre los mismos tokens.",
+    "meta": {
+      "angular": "Angular 22",
+      "themes": "Claro y oscuro",
+      "languages": "Docs en 9 idiomas"
+    },
+    "links": {
+      "docs": "Documentación",
+      "github": "GitHub"
+    },
+    "features": {
+      "tokens": {
+        "title": "Tokens de diseño",
+        "description": "CSS independiente del framework: colores, tipografía, espaciado y fuentes propias."
+      },
+      "skins": {
+        "title": "Tres temas, cinco acentos",
+        "description": "Studio, Paper y Minimalist, cada uno en claro y oscuro."
+      },
+      "components": {
+        "title": "Componentes de Angular",
+        "description": "Piezas basadas en directivas, un punto de entrada por componente."
+      },
+      "docs": {
+        "title": "Docs y Storybook",
+        "description": "Documentación prerenderizada y cada componente en Storybook, revisados con axe-core."
+      },
+      "mcp": {
+        "title": "Servidor MCP",
+        "description": "Da a tu asistente de IA los componentes, su API, plantillas y variables del tema."
+      },
+      "skills": {
+        "title": "Skills para agentes",
+        "description": "Un comando instala las skills de Surface One para Claude, Codex y Copilot."
       }
     }
   },

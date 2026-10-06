@@ -10,7 +10,7 @@ export interface Project {
   /** Public repo whose stars are shown on the card */
   repo: string
   /** Release stage shown next to the status badge, e.g. `alpha` → `stage.alpha` */
-  stage?: 'alpha'
+  stage?: 'alpha' | 'beta'
   /** Two colors from the app's logo, used for the stage badge */
   accent?: [string, string]
   meta: string[]
@@ -99,6 +99,27 @@ export const projects: Project[] = [
         to: 'https://monoone-dev.github.io/rig-one-landing-page/',
         icon: 'i-lucide-arrow-up-right'
       }
+    ]
+  },
+  {
+    key: 'surfaceOne',
+    name: 'Surface One',
+    mark: 'SurfaceOneMark',
+    stage: 'beta',
+    accent: ['#f43fb4', '#1d2df5'],
+    repo: 'surface-one',
+    meta: ['angular', 'themes', 'languages'],
+    features: [
+      { key: 'tokens', icon: 'i-lucide-palette' },
+      { key: 'skins', icon: 'i-lucide-swatch-book' },
+      { key: 'components', icon: 'i-lucide-component' },
+      { key: 'docs', icon: 'i-lucide-book-open' },
+      { key: 'mcp', icon: 'i-lucide-plug' },
+      { key: 'skills', icon: 'i-lucide-sparkles' }
+    ],
+    links: [
+      { key: 'docs', to: 'https://monoone-dev.github.io/surface-one/', icon: 'i-lucide-book-open' },
+      { key: 'github', to: 'https://github.com/monoone-dev/surface-one', icon: 'i-lucide-arrow-up-right' }
     ]
   }
 ]
