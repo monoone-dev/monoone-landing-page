@@ -1,7 +1,7 @@
 {
   "meta": {
-    "title": "De petits logiciels pour Mac, privés par défaut",
-    "description": "Nous créons des outils qui gardent vos données sur votre appareil et vous laissent des fichiers qui vous appartiennent."
+    "title": "De petits logiciels, privés par défaut",
+    "description": "MonoOne crée IndexOne, des notes de réunion privées pour macOS, RigOne, une salle de contrôle pour agents de code, et Surface One, un design system. Tout est gratuit."
   },
   "nav": {
     "principles": "Principes",
@@ -18,7 +18,7 @@
     "system": "Système"
   },
   "hero": {
-    "badge": "Logiciels indépendants · macOS",
+    "badge": "Logiciels indépendants · Mac et web",
     "title1": "De petits logiciels.",
     "title2": "Privés par défaut.",
     "description": "Nous créons des outils qui gardent vos données sur votre appareil et vous laissent des fichiers qui vous appartiennent.",
@@ -45,8 +45,8 @@
         "description": "Les fonctions cloud sont facultatives et les données sensibles sont masquées avant l'envoi. Le partage est chiffré de bout en bout."
       },
       "mac": {
-        "title": "Conçu pour le Mac",
-        "description": "Natif, signé et notarié. Apple Silicon et Intel, macOS 13.4 ou ultérieur."
+        "title": "Mac et web",
+        "description": "Des apps Mac natives, signées et notariées. Surface One, c'est du CSS simple et des composants Angular pour toute app web."
       }
     }
   },

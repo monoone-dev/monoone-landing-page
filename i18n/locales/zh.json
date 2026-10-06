@@ -1,7 +1,7 @@
 {
   "meta": {
-    "title": "专为 Mac 打造的小巧软件，默认保护隐私",
-    "description": "我们打造的工具会把你的数据留在你的设备上，并让你拥有属于自己的文件。"
+    "title": "小巧软件，默认保护隐私",
+    "description": "MonoOne 打造了 IndexOne（macOS 上的私密会议笔记）、RigOne（编程智能体的控制中心）和 Surface One（设计系统）。全部免费。"
   },
   "nav": {
     "principles": "理念",
@@ -18,7 +18,7 @@
     "system": "跟随系统"
   },
   "hero": {
-    "badge": "独立软件 · macOS",
+    "badge": "独立软件 · Mac 与 Web",
     "title1": "小巧的软件。",
     "title2": "默认私密。",
     "description": "我们打造的工具会把你的数据留在你的设备上，并让你拥有属于自己的文件。",
@@ -45,8 +45,8 @@
         "description": "云端功能需主动开启，发送前会移除敏感信息。共享采用端到端加密。"
       },
       "mac": {
-        "title": "为 Mac 而生",
-        "description": "原生应用，已签名并经过公证。支持 Apple Silicon 和 Intel，需要 macOS 13.4 或更高版本。"
+        "title": "Mac 与 Web",
+        "description": "原生 Mac 应用，已签名并经过公证。Surface One 是适用于任何 Web 应用的纯 CSS 和 Angular 组件。"
       }
     }
   },

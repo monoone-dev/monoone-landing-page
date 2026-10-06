@@ -1,14 +1,4 @@
-const locales = [
-  { code: 'en', language: 'en', name: 'English', file: 'en.json' },
-  { code: 'pl', language: 'pl-PL', name: 'Polski', file: 'pl.json' },
-  { code: 'es', language: 'es-ES', name: 'Español', file: 'es.json' },
-  { code: 'it', language: 'it-IT', name: 'Italiano', file: 'it.json' },
-  { code: 'fr', language: 'fr-FR', name: 'Français', file: 'fr.json' },
-  { code: 'pt', language: 'pt-BR', name: 'Português', file: 'pt.json' },
-  { code: 'de', language: 'de-DE', name: 'Deutsch', file: 'de.json' },
-  { code: 'zh', language: 'zh-CN', name: '简体中文', file: 'zh.json' },
-  { code: 'ja', language: 'ja-JP', name: '日本語', file: 'ja.json' }
-]
+import { locales } from './shared/locales'
 
 // The static build serves English HTML at /. If i18n switched that page to the visitor's language
 // after it loaded, hydration would keep English attributes (the flag in the header stayed British
@@ -24,7 +14,7 @@ var saved=document.cookie.match(/(?:^|; )i18n_locale=([^;]*)/);
 var code=saved?saved[1]:null;
 if(!code){var langs=navigator.languages||[navigator.language];
 for(var i=0;i<langs.length&&!code;i++){var c=String(langs[i]).toLowerCase().split('-')[0];if(codes.indexOf(c)>-1)code=c}}
-if(code&&code!=='en'&&codes.indexOf(code)>-1)location.replace(base+code+location.search+location.hash);
+if(code&&code!=='en'&&codes.indexOf(code)>-1)location.replace(base+code+'/'+location.search+location.hash);
 }catch(e){}})()`
 
 export default defineNuxtConfig({
@@ -57,6 +47,8 @@ export default defineNuxtConfig({
     baseUrl: 'https://monoone.dev',
     defaultLocale: 'en',
     strategy: 'prefix_except_default',
+    // GitHub Pages answers /pl with a 301 to /pl/, so canonical and hreflang links use the slash
+    trailingSlash: true,
     locales,
     vueI18n: './i18n.config.ts',
     // Any browser language we don't support (and any missing key) falls back to English
@@ -72,7 +64,7 @@ export default defineNuxtConfig({
   // numbers into the pages; the deploy workflow reruns daily to refresh them.
   nitro: {
     prerender: {
-      routes: ['/', '/pl', '/es', '/it', '/fr', '/pt', '/de', '/zh', '/ja', '/api/github']
+      routes: ['/', '/pl', '/es', '/it', '/fr', '/pt', '/de', '/zh', '/ja', '/api/github', '/sitemap.xml', '/robots.txt']
     }
   },
 

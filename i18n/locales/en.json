@@ -1,7 +1,7 @@
 {
   "meta": {
-    "title": "Small, private-by-default software for the Mac",
-    "description": "We build tools that keep your data on your device and leave you with files you own."
+    "title": "Small software, private by default",
+    "description": "MonoOne makes IndexOne, private meeting notes for macOS; RigOne, a control room for coding agents; and Surface One, a design system. All free."
   },
   "nav": {
     "principles": "Principles",
@@ -18,7 +18,7 @@
     "system": "System"
   },
   "hero": {
-    "badge": "Independent software · macOS",
+    "badge": "Independent software · Mac & web",
     "title1": "Small software.",
     "title2": "Private by default.",
     "description": "We build tools that keep your data on your device and leave you with files you own.",
@@ -45,8 +45,8 @@
         "description": "Cloud features are opt-in and redacted. Sharing is end-to-end encrypted."
       },
       "mac": {
-        "title": "Made for the Mac",
-        "description": "Native, signed and notarized. Apple Silicon and Intel, macOS 13.4 or later."
+        "title": "Mac and web",
+        "description": "Native Mac apps, signed and notarized. Surface One is plain CSS and Angular components for any web app."
       }
     }
   },

@@ -15,10 +15,8 @@ const { t } = useI18n()
       </template>
 
       <template #headline>
-        <div class="flex flex-col items-center gap-8">
-          <div class="hero-mark enter">
-            <MonoMark class="size-20 sm:size-24" />
-          </div>
+        <div class="flex w-full flex-col items-center gap-8">
+          <HeroFamily class="enter" />
           <UBadge
             :label="t('hero.badge')"
             color="neutral"

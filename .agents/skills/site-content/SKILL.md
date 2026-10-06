@@ -13,7 +13,9 @@ description: Change what the MonoOne website says or shows — add or edit a pro
 | Page structure: links, icons, translation keys | `app/data/site.ts` |
 | Header: desktop bar, tablet and phone menus | `app/components/AppHeader.vue` |
 | Language and theme menus (shared by the bar and the phone menu) | `app/composables/useLanguageMenu.ts`, `app/composables/useThemeMenu.ts`; buttons in `LanguageSwitcher.vue`, `ThemeMenu.vue`; flags in `app/data/site.ts` |
-| Languages, default, browser detection | `i18n` block in `nuxt.config.ts`, plural rules in `i18n/i18n.config.ts` |
+| Languages, default, browser detection | list in `shared/locales.ts`, `i18n` block in `nuxt.config.ts`, plural rules in `i18n/i18n.config.ts` |
+| SEO: title, description, Open Graph, structured data | `meta` keys in the locale files, `useSeoMeta` and the JSON-LD in `app/app.vue`, `category` per project in `app/data/site.ts` |
+| Sitemap and robots.txt | `server/routes/sitemap.xml.ts`, `server/routes/robots.txt.ts` (prerendered) |
 | Page layout (hero, principles, projects, contact) | `app/pages/index.vue` |
 | Project card | `app/components/ProjectShowcase.vue` |
 | MonoOne mark (theme-aware SVG) | `app/components/MonoMark.vue`, colors in `--mark-*` in `app/assets/scss/main.scss` |
@@ -42,8 +44,8 @@ description: Change what the MonoOne website says or shows — add or edit a pro
 - Chinese is Simplified (`zh` → `zh-CN`); Traditional-Chinese browsers also land on it.
 - Use gender-neutral phrasing (Polish: avoid `-łeś/-łaś` forms).
 - Escape vue-i18n special characters (`@ { } | $`) as `{'@'}` if they ever appear in copy.
-- Adding a language: a JSON file, an entry in `i18n.locales` and in `nitro.prerender.routes` in
-  `nuxt.config.ts`, a flag in `flags` in `app/data/site.ts` (`i-circle-flags-<country>`), and check
+- Adding a language: a JSON file, an entry in `shared/locales.ts` (the i18n module and the sitemap
+  read it) and in `nitro.prerender.routes` in `nuxt.config.ts`, a flag in `flags` in `app/data/site.ts` (`i-circle-flags-<country>`), and check
   that `@nuxt/ui/locale` has it (Nuxt UI's own labels; see `uiLocale` in `app/app.vue`).
 
 ## Add a project
