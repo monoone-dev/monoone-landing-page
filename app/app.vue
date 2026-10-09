@@ -74,6 +74,9 @@ const structuredData = computed(() => ({
       ...(project.links.some(link => link.key === 'download') && {
         downloadUrl: project.links.find(link => link.key === 'download')?.to
       }),
+      ...(project.links.some(link => link.key === 'github') && {
+        sameAs: [project.links.find(link => link.key === 'github')?.to]
+      }),
       'offers': { '@type': 'Offer', 'price': '0', 'priceCurrency': 'USD' },
       'publisher': { '@id': `${home}#organization` }
     }))

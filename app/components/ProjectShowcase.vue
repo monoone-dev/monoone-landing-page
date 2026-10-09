@@ -54,7 +54,7 @@ const stars = computed(() => stats.value?.repos[props.project.repo])
         </div>
 
         <h3 class="wordmark mt-5 text-4xl sm:text-5xl text-highlighted">
-          <b>{{ word.head }}</b> <span>{{ word.tail }}</span>
+          <b>{{ word.head }}</b><span>{{ word.tail }}</span>
         </h3>
         <p class="mt-3 text-xl font-medium text-toned text-balance">
           {{ k('tagline') }}

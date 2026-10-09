@@ -1,7 +1,7 @@
 {
   "meta": {
     "title": "小さなソフトウェア。最初からプライバシー重視",
-    "description": "MonoOne は、macOS 向けのプライベートな会議メモ IndexOne、コーディングエージェントのコントロールルーム RigOne、デザインシステム Surface One をつくっています。すべて無料です。"
+    "description": "MonoOne は、macOS 向けのプライベートな会議メモ IndexOne、コーディングエージェントのコントロールルーム RigOne、Angular と Vue のためのデザインシステム SurfaceOne をつくっています。すべて無料です。"
   },
   "nav": {
     "principles": "理念",
@@ -46,7 +46,7 @@
       },
       "mac": {
         "title": "Mac と Web",
-        "description": "Mac アプリはネイティブで、署名と公証済み。Surface One はあらゆる Web アプリで使えるプレーンな CSS と Angular コンポーネントです。"
+        "description": "Mac アプリはネイティブで、署名と公証済み。SurfaceOne はあらゆる Web アプリで使えるプレーンな CSS と、Angular と Vue のコンポーネントです。"
       }
     }
   },
@@ -141,10 +141,10 @@
   },
   "surfaceOne": {
     "status": "無料",
-    "tagline": "どのアプリでも使えるデザインシステムとコンポーネントライブラリ。",
-    "description": "Surface One は、どのアプリでも使えるようにパッケージ化したデザインシステムとコンポーネントライブラリです。デザイントークンとスキンは素の CSS、その上に Angular コンポーネント。同じトークンを使う Vue と React のパッケージも予定しています。",
+    "tagline": "Angular と Vue のためのデザインシステムとコンポーネントライブラリ。",
+    "description": "SurfaceOne は、どのアプリでも使えるデザインシステムとコンポーネントライブラリです。デザイントークンとスキンは素の CSS、その上に Angular と Vue / Nuxt のコンポーネント。同じトークンを使う React も予定しています。フォームやオーバーレイからチャート、グラフ、録音コントロールまで 70 以上のコンポーネント。",
     "meta": {
-      "angular": "Angular 22",
+      "frameworks": "Angular · Vue · Nuxt",
       "themes": "ライトとダーク",
       "languages": "9 言語のドキュメント"
     },
@@ -162,12 +162,12 @@
         "description": "Studio、Paper、Minimalist。それぞれライトとダーク。"
       },
       "components": {
-        "title": "Angular コンポーネント",
-        "description": "ディレクティブ中心のパーツ。コンポーネントごとにエントリポイント。"
+        "title": "Angular と Vue のコンポーネント",
+        "description": "シグナルファーストな Angular パーツと Vue 3 / Nuxt 版。コンポーネントごとにエントリポイント。"
       },
       "docs": {
         "title": "ドキュメントと Storybook",
-        "description": "プリレンダリングされたドキュメントと全コンポーネントの Storybook。axe-core で検証済み。"
+        "description": "Angular と Vue のコード付きで 9 言語のドキュメント。全コンポーネントを Storybook に掲載し、axe-core で検証済み。"
       },
       "mcp": {
         "title": "MCP サーバー",
@@ -175,7 +175,7 @@
       },
       "skills": {
         "title": "エージェントスキル",
-        "description": "1 つのコマンドで Claude、Codex、Copilot 向けの Surface One スキルを導入。"
+        "description": "1 つのコマンドで Claude、Codex、Copilot 向けの SurfaceOne スキルを導入。"
       }
     }
   },

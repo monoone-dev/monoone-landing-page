@@ -107,13 +107,13 @@ export const projects: Project[] = [
   },
   {
     key: 'surfaceOne',
-    name: 'Surface One',
+    name: 'SurfaceOne',
     mark: 'SurfaceOneMark',
     stage: 'beta',
     accent: ['#f43fb4', '#1d2df5'],
     repo: 'surface-one',
     category: 'DeveloperApplication',
-    meta: ['angular', 'themes', 'languages'],
+    meta: ['frameworks', 'themes', 'languages'],
     features: [
       { key: 'tokens', icon: 'i-lucide-palette' },
       { key: 'skins', icon: 'i-lucide-swatch-book' },
