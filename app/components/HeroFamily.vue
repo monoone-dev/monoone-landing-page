@@ -4,7 +4,7 @@ import IndexOneMark from './IndexOneMark.vue'
 import RigOneMark from './RigOneMark.vue'
 import SurfaceOneMark from './SurfaceOneMark.vue'
 
-// Hero drawing: the MonoOne mark floats over an isometric plane (Surface One's stacked planes),
+// Hero drawing: the MonoOne mark floats over an isometric plane (SurfaceOne's stacked planes),
 // dotted like RigOne's canvas, with every product icon on a corner, wired to the center the way
 // RigOne connects agents. Positions are on a 400 × 264 board, as percentages so it scales.
 // Imported by hand for the same reason as in ProjectShowcase: `:is` with a string renders nothing.
@@ -73,7 +73,7 @@ const id = useId()
         </radialGradient>
       </defs>
 
-      <!-- two planes below, like Surface One's stack -->
+      <!-- two planes below, like SurfaceOne's stack -->
       <path
         :d="plane"
         class="hero-family__plane hero-family__plane--under"

@@ -1,7 +1,7 @@
 {
   "meta": {
     "title": "小巧软件，默认保护隐私",
-    "description": "MonoOne 打造了 IndexOne（macOS 上的私密会议笔记）、RigOne（编程智能体的控制中心）和 Surface One（设计系统）。全部免费。"
+    "description": "MonoOne 打造了 IndexOne（macOS 上的私密会议笔记）、RigOne（编程代理的控制室）以及 SurfaceOne（面向 Angular 和 Vue 的设计系统）。全部免费。"
   },
   "nav": {
     "principles": "理念",
@@ -46,7 +46,7 @@
       },
       "mac": {
         "title": "Mac 与 Web",
-        "description": "原生 Mac 应用，已签名并经过公证。Surface One 是适用于任何 Web 应用的纯 CSS 和 Angular 组件。"
+        "description": "原生 Mac 应用，已签名并公证。SurfaceOne 是纯 CSS 加上 Angular 与 Vue 组件，适用于任何 Web 应用。"
       }
     }
   },
@@ -141,10 +141,10 @@
   },
   "surfaceOne": {
     "status": "免费",
-    "tagline": "适用于任何应用的设计系统和组件库。",
-    "description": "Surface One 是一套设计系统和组件库，打包后任何应用都能使用。设计令牌和皮肤是纯 CSS，上层是 Angular 组件，基于同一套令牌的 Vue 和 React 包也在计划中。",
+    "tagline": "面向 Angular 和 Vue 的设计系统与组件库。",
+    "description": "SurfaceOne 是任何应用都能使用的设计系统和组件库。设计令牌和皮肤是纯 CSS，在其之上是 Angular 与 Vue / Nuxt 组件，React 也计划基于同一套令牌推出。70 多个组件，从表单、浮层到图表、关系图和录制控件。",
     "meta": {
-      "angular": "Angular 22",
+      "frameworks": "Angular · Vue · Nuxt",
       "themes": "浅色与深色",
       "languages": "9 种语言的文档"
     },
@@ -162,12 +162,12 @@
         "description": "Studio、Paper 和 Minimalist，均有浅色和深色版本。"
       },
       "components": {
-        "title": "Angular 组件",
-        "description": "以指令为先的组件部件，每个组件一个入口。"
+        "title": "Angular 与 Vue 组件",
+        "description": "基于 signal 的 Angular 部件，配有 Vue 3 和 Nuxt 版本，每个组件一个入口。"
       },
       "docs": {
         "title": "文档与 Storybook",
-        "description": "预渲染的文档，每个组件都在 Storybook 中，并经 axe-core 检查。"
+        "description": "九种语言的文档，附 Angular 与 Vue 代码，每个组件都在 Storybook 中，并经 axe-core 检查。"
       },
       "mcp": {
         "title": "MCP 服务器",
@@ -175,7 +175,7 @@
       },
       "skills": {
         "title": "智能体技能",
-        "description": "一条命令即可为 Claude、Codex 和 Copilot 安装 Surface One 技能。"
+        "description": "一条命令即可为 Claude、Codex 和 Copilot 安装 SurfaceOne 技能。"
       }
     }
   },

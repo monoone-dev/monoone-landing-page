@@ -1,7 +1,7 @@
 {
   "meta": {
     "title": "Software pequeño, privado por defecto",
-    "description": "MonoOne crea IndexOne, notas de reuniones privadas para macOS; RigOne, un centro de control para agentes de código; y Surface One, un sistema de diseño. Todo gratis."
+    "description": "MonoOne crea IndexOne, notas de reuniones privadas para macOS; RigOne, una sala de control para agentes de programación; y SurfaceOne, un sistema de diseño para Angular y Vue. Todo gratis."
   },
   "nav": {
     "principles": "Principios",
@@ -46,7 +46,7 @@
       },
       "mac": {
         "title": "Mac y web",
-        "description": "Apps nativas para Mac, firmadas y notarizadas. Surface One es CSS puro y componentes de Angular para cualquier app web."
+        "description": "Apps nativas para Mac, firmadas y notarizadas. SurfaceOne es CSS simple con componentes de Angular y Vue para cualquier app web."
       }
     }
   },
@@ -141,10 +141,10 @@
   },
   "surfaceOne": {
     "status": "Gratis",
-    "tagline": "Un sistema de diseño y una biblioteca de componentes para cualquier app.",
-    "description": "Surface One es un sistema de diseño y una biblioteca de componentes empaquetados para que cualquier app pueda usarlos. Los tokens y los temas son CSS puro, encima van los componentes de Angular, y hay paquetes para Vue y React previstos sobre los mismos tokens.",
+    "tagline": "Un sistema de diseño y una biblioteca de componentes para Angular y Vue.",
+    "description": "SurfaceOne es un sistema de diseño y una biblioteca de componentes que cualquier app puede usar. Los tokens y skins son CSS simple; encima hay componentes para Angular y Vue / Nuxt, y React está previsto sobre los mismos tokens. Más de 70 componentes, desde formularios y overlays hasta gráficos, grafos y controles de grabación.",
     "meta": {
-      "angular": "Angular 22",
+      "frameworks": "Angular · Vue · Nuxt",
       "themes": "Claro y oscuro",
       "languages": "Docs en 9 idiomas"
     },
@@ -162,12 +162,12 @@
         "description": "Studio, Paper y Minimalist, cada uno en claro y oscuro."
       },
       "components": {
-        "title": "Componentes de Angular",
-        "description": "Piezas basadas en directivas, un punto de entrada por componente."
+        "title": "Componentes de Angular y Vue",
+        "description": "Piezas de Angular basadas en señales con gemelos para Vue 3 y Nuxt, un punto de entrada por componente."
       },
       "docs": {
         "title": "Docs y Storybook",
-        "description": "Documentación prerenderizada y cada componente en Storybook, revisados con axe-core."
+        "description": "Documentación en nueve idiomas con código de Angular y Vue, cada componente en Storybook, verificado con axe-core."
       },
       "mcp": {
         "title": "Servidor MCP",
@@ -175,7 +175,7 @@
       },
       "skills": {
         "title": "Skills para agentes",
-        "description": "Un comando instala las skills de Surface One para Claude, Codex y Copilot."
+        "description": "Un comando instala las skills de SurfaceOne para Claude, Codex y Copilot."
       }
     }
   },
