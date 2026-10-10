@@ -100,7 +100,7 @@ export const projects: Project[] = [
       },
       {
         key: 'site',
-        to: 'https://monoone-dev.github.io/rig-one-landing-page/',
+        to: 'https://monoone.dev/rig-one-landing-page/',
         icon: 'i-lucide-arrow-up-right'
       }
     ]
@@ -123,7 +123,7 @@ export const projects: Project[] = [
       { key: 'skills', icon: 'i-lucide-sparkles' }
     ],
     links: [
-      { key: 'docs', to: 'https://monoone-dev.github.io/surface-one/', icon: 'i-lucide-book-open' },
+      { key: 'docs', to: 'https://monoone.dev/surface-one/', icon: 'i-lucide-book-open' },
       { key: 'github', to: 'https://github.com/monoone-dev/surface-one', icon: 'i-lucide-arrow-up-right' }
     ]
   }
